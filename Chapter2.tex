@@ -1,0 +1,543 @@
+%Chapter 2
+
+\renewcommand{\thechapter}{2}
+
+\chapter{Background of the system}
+
+\section{Basic structure of 2D Transition Metal Dichalcogenides}
+
+\subsection{Lattice Structure}
+Transition metal dichalcogenides(TMD) semicondcutor have the general chemical formula of $MX_2$, where $M$ refers to the transition metal atom($Mo,W$) and $X$ is the chalcogen atom($S$,$Se$,$Te$).
+In the TMD bulk crystal, the metal and chalcogen atoms are bonded through covalent-ionic bonds, whereas different layers are bonded by the weak van der Waals force.
+This enables accessing the monolayer TMD through mechanical exfoliation.
+There are three different phases in the TMD crystal: hexagonal 2H, rhombohedral 3R, and trigonal 1T' phases. In their most thermaldynamic stable phase 2H polytype, a monolayer consists of a hexagonal plane of transition metal atoms sandwiched between two planes of chalcogen atoms, forming trigonal prismatic coordination.
+This yields a honeycomb-like lattice with \textbf{$D_{3h}$} 
+point-group symmetry at the monolayer level, with the absence of inversion symmetry. 
+However, this inversion symmetry can be restored in even number multilayers, with one layer is rotated $180^\circ$ relative to the other layer.
+
+In 3R phase, each successive monolayer is shifted relative to the one below, following an ABC stacking order and belongs to the \textbf{$C_{3v}$}point group rather than the AB sequence of the 2H phase. 
+This stacking is characterized by the absence of inversion symmetry at all thicknesses. 
+As a result, strong second-order nonlinear optical processes, such as second-harmonic generation, have been extensively investigated in 3R multilayers\cite{Xu2022-at,Qin2024-xt}.
+
+The 1T phase, by comparison, features octahedral coordination of the transition-metal atoms with $D_{3d}$ point-group symmetry, which includes inversion symmetry even at the monolayer level.
+While the ideal 1T structure is metallic, certain compounds undergo lattice distortions into the so-called 1T$^{\prime}$ phase, which breaks inversion symmetry and can host semimetallic or topologically nontrivial states, including quantum spin Hall insulators and type-II Weyl semimetals.
+%%figure1-1
+\renewcommand{\baselinestretch}{2}
+\small\normalsize
+\begin{quote}
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.85\textwidth]{Figures/C2/Fig.2-1_lattice.jpg}%
+\end{center}
+\caption[\textbf{Crystal structures of TMDC.}]{\textbf{a,b,} Side view (top) and top view (bottom) of the 3R and 2H stacking structure. 
+\textbf{c,} Hexagonal Brillouin zone of TMD with the reciprocal lattice vectors $\mathbf{b_1}$ and $\mathbf{b_2}$.}
+\label{fig.lattice}
+\end{figure}
+\end{quote}
+\renewcommand{\baselinestretch}{2}
+\small\normalsize
+% ------
+
+\subsection{Electronic band structure of TMD}
+In this thesis, we mainly study the layers mechanically exfoliated from 2H phase TMD. The discussion of the electronic bandstructure would thus mainly focus on the 2H phase. 
+
+For the semicondcutor TMDCs, the bandgap is around 1 to 2 eV\cite{Manzeli2017-nt}.
+In the monolayer TMD, the conduction band minimum and valence band maximum located at the corner of the Brillouin zone $K$ ($K^\prime$) valley, which is mainly derived from the transition-metal $d$ orbitals ($d_{z^2}$ for the conduction band and $d_{x^2-y^2}$ + $d_{xy}$ for the valence band)\cite{Liu2013-jh}. 
+%%figure1-2
+\renewcommand{\baselinestretch}{2}
+\small\normalsize
+\begin{quote}
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.65\textwidth]{Figures/C2/Fig.2-2_bandstructure.jpg}%
+\end{center}
+\caption[\textbf{Band structures of TMDC.}]{\textbf{a,b,c} Calculated orbital projected band structure for monolayer $MoS_2$, with \textbf{a} contribution from the Mo atom $d$ orbitals;\textbf{b}Total $p$ orbitals dominated by the chalcogen S atom; \textbf{c} Total $s$ orbital.
+\textbf{d,e,f,g} Calculated bandstructure of bulk,quadrilayer,bilayer and monolayer TMD(from left to right).
+The crossover from indirect to direct bandstructure happens at the monolayer limit.Figure adpated from\cite{Splendiani2010-km,Liu2013-jh}.}
+\label{fig.band}
+\end{figure}
+\end{quote}
+\renewcommand{\baselinestretch}{2}
+\small\normalsize
+
+One well-known feature of the TMD materials is the indirect to direct band structure transition when the layer thickness is approaching to the monolayer limit\cite{Mak2010-dq}.
+This crossover arises from the different sensitivity of electronic states at distinct wave vectors to interlayer coupling and quantum confinement\cite{Splendiani2010-km}.
+At the k points, states are strongly localized around the metal atoms and therefore remain largely unaffected by interlayer coupling. 
+In contrast, the valence states near $\Gamma$ and the conduction states near the $Q$ valley (between $\Gamma$ and $K$) originate from hybridization between transition-metal $d$ orbitals 
+and chalcogen $p_z$ orbitals. 
+Because the $p_z$ orbitals extend out of plane, they are more 
+delocalized and thus highly sensitive to interlayer coupling. 
+As a result,with increasing layer numbers lifts the $\Gamma$ valence band upward and lowers the $Q$ conduction band, while the $K$ valleys remain nearly unchanged.   % \cite{yong}
+Figure~\ref{fig.band} shows this direct–indirect crossover in the calculated bandstructures.
+
+\subsection{Spin-orbit interaction}
+Spin--orbit coupling (SOC) arises from the relativistic interaction between an electron’s orbital motion and its spin. 
+In the effective one-electron picture, the SOC Hamiltonian can be expressed as
+\begin{equation}
+H_{\mathrm{SOC}} = \xi(r)\, \mathbf{L}\cdot\mathbf{S}
+\label{eq.SOC}
+\end{equation}
+where $\mathbf{L}$ and $\mathbf{S}$ are the orbital and spin angular momenta, and $\xi(r)$ denotes the radial SOC strength, which increases strongly with atomic number. 
+In transition-metal dichalcogenides (TMDs), the heavy transition-metal atoms (Mo, W) provide a strong SOC environment that directly impacts the band edges.
+% \cite{Coupled Spin and Valley Physics in Monolayers of  and Other Group-VI Dichalcogenides}
+At the $K$ and $K'$ valleys, the valence-band maximum is primarily derived from in-plane $d_{x^2-y^2}$ and $d_{xy}$ orbitals. 
+In the complex orbital basis, these states correspond to magnetic quantum numbers $m_l = \pm 2$, which carry significant angular momentum around the $z$-axis. 
+Their strong coupling to spin through the $L_z S_z$ interaction results in a large spin splitting, typically several hundred meV, especially for W-based TMD. 
+In contrast, the conduction-band minimum originates mainly from the $d_{z^2}$ orbital ($m_l = 0$), which carries zero orbital angular momentum projection along $z$. 
+However, the calculation of the bandstructure shows a finite spin splitting in the value of a few meV in the conduction band.
+This arises through SOC-mediated coupling of the 
+$d_{z^2}$ state to nearby orbitals that carry finite angular momentum ($m_l = \pm 1$), most importantly the transition-metal $d_{xz}/d_{yz}$ and chalcogen $p_x/p_y$ states. 
+In MoX$_2$, this interaction produces a negative splitting, so the lower conduction subband has the opposite spin orientation to the valence-band maximum. 
+In contrast, WX$_2$ compounds exhibit a positive splitting, and the conduction subband ordering is reversed.
+The broken inversion symmetry together with strong spin–orbit coupling in monolayer TMDs gives rise to spin–valley coupling, which enables control of valley degrees of freedom through phenomena such as the valley Hall effect and valley-selective optical transitions.
+
+\subsection{Valley-Dependent Optical Selection Rules}
+Optical transitions in semiconductors are governed by the electric-dipole selection rule, 
+which enforces conservation of angular momentum between the electron system and the absorbed or emitted photon. 
+The corresponding transition amplitude can be written as:
+\begin{equation}
+M_{\pm}(\mathbf{k}) = \big\langle \psi_{c}(\mathbf{k}) \big| 
+\hat{\mathbf{p}} \cdot \mathbf{e}_{\pm} 
+\big| \psi_{v}(\mathbf{k}) \big\rangle,
+\label{eq.OP transition}
+\end{equation}
+where $\psi_{v}$ and $\psi_{c}$ denote the valence- and conduction-band Bloch states,
+$\hat{\mathbf{p}}$ is the momentum operator, and
+$\mathbf{e}_{\pm} =\frac{1}{\sqrt{2}} (\hat{x} \pm i\hat{y})$ are polarization vectors for right- ($\sigma^{+}$) and left- ($\sigma^{-}$) handed circularly polarized light. 
+Because $\mathbf{e}_{\pm}$ carries angular momentum projection $\pm \hbar$ along the light propagation axis, a circularly polarized photon transfers angular momentum $\pm 1$ into the electronic system. 
+Thus, optical excitation with $\sigma^+$ or $\sigma^-$ light can
+be used to probe states that differ in their orbital angular momentum by one unit.
+
+In semiconducting TMD monolayers, the broken inversion symmetry and strong spin--orbit coupling translate these general rules into valley-specific selection rules. 
+The valence band maximum at the inequivalent $K$ and $K'$ valleys is dominated by metal $d_{x^2-y^2}$ and $d_{xy}$ orbitals, which combine as $d_{x^2-y^2} \pm i d_{xy}$ and carry angular momentum projections $m_l = \pm 2$. 
+The conduction band minimum is mainly derived from the $d_{z^2}$ orbital ($m_l=0$). 
+Interband optical transitions are therefore allowed only if the angular momentum of the photon compensates the orbital character of the valence state. 
+As a consequence, transitions at the $K$ valley couple exclusively to $\sigma^+$ photons, while those at $K'$ couple only to $\sigma^-$ photons as shown in Figure~\ref{fig.selection-rule}
+
+%Fig.5--------------
+\renewcommand{\baselinestretch}{1}
+\small\normalsize
+\begin{quote}
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{Figures/C2/Fig.selection_rule.jpg} % 
+\end{center}
+\caption[Valley-dependent optical selection rule] {\textbf{Valley-dependent optical selection rule.}The left and right circular polarized light coupled to the $K$ and $K^\prime$ valley, respectively.}
+\label{fig.selection-rule}
+\end{figure}
+\end{quote}
+\renewcommand{\baselinestretch}{2}
+\small\normalsize
+% --------------
+
+This valley--helicity locking gives rise to valley-selective circular dichroism, as demonstrated in monolayer MoS$_2$ \cite{mak2012}. 
+The experimental observation o nearly perfect polarization selectivity provides direct evidence that inversion symmetry
+breaking is essential for lifting valley degeneracy in optical transitions.
+
+However, in bilayer TMDs with 2H stacking, where the top layer is rotated by $180^{\circ}$ relative to the bottom layer, the inversion
+symmetry is restored, and the valley-dependent optical selection rules are lost: both
+valleys can now couple to both helicities with equal weight. 
+As a result, bilayer MoS$_2$ shows no net circular dichroism under optical excitation \cite{mak2012}. 
+This striking contrast between monolayer and bilayer systems highlights the crucial role of symmetry:
+broken inversion symmetry in monolayers enforces a one-to-one correspondence between photon helicity and valley index, while the restoration of inversion symmetry in bilayers removes this correspondence and suppresses valley polarization.
+
+In summary, the valley-contrasting optical selection rules in monolayer TMDs originate from the unique orbital composition of the band edges and the absence of inversion symmetry. 
+These rules form the microscopic basis of valley-selective optical excitation and detection, establishing light helicity as a powerful handle to manipulate valley degrees of freedom in two-dimensional semiconductors.
+
+\section{Excitons in TMDs}
+When the semiconductor absorbs a photon with energy greater than its band gap, an electron would be promoted from the valence band to the conduction band and leaves a positively charged hole in the valence band. 
+The Coulomb attraction between the negatively charged electron and the hole can lead to the formation of a bound electorn-hole pair called exciton. 
+
+Excitons can be classified into two types depending on the spatial extent of the electron--hole wavefunction. 
+Frenkel excitons, typically exist in molecular crystals and insulators, are tightly bound and localized on the scale of one unit cell. 
+In contrast, Wannier–Mott excitons have a larger radius and extend over many unit cells, so their center of mass can propagate through the crystal. 
+Owing to this spatial delocalization, they are commonly referred to as free excitons.
+
+In the presence of free carriers, excitons can interact with the surrounding Fermi sea of electrons or holes, forming new excitation states known as polarons. 
+The polaron can be described as an exciton dressed by particle--hole excitations of the Fermi sea, shown as two different branches in the optical spectrum: an attractive polaron at lower energy and a repulsive polaron at higher energy.
+
+\subsection{Wannier equation and binding energy}
+The energy of the exciton can be obtained by solving the two-body Schrödinger equation, which can be written in relative and center-of-mass coordinates. 
+The relative motion based on the effective mass can be described by the Wannier equation:
+\begin{equation}
+-\left[ \frac{\hbar^2}{2\mu} \nabla^2 + V(\textbf{r}) \right] \psi_{n}(\textbf{r}) 
+= E_{n} \, \psi_{n}(\textbf{r})
+\label{eq:wannier}
+\end{equation}
+where $\mu =\frac {m_e m_h}{(m_e+m_h)}$ is the reduced mass,$\psi_{n}(r)$ is the exciton wavefunction. $V(r)$ is the Coulomb interaction, and $E_n$ are the excitonic eigenenergies below the band gap $E_g$. 
+$V(r)$ has the Coulomb form as:
+\begin{equation}
+V(\textbf{r}) = - \frac{e^2}{4\pi \varepsilon_0 \varepsilon_r \textbf{r}}
+\label{eq:coulomb}
+\end{equation}
+By solving the Wannier equation with 3D and 2D Laplace operator in polar coordinates, we can obtain the exciton binding energies follow a Rydberg series:
+\begin{flalign}
+E_{B,3D}^{(n)} = - \frac{R_X}{n^2} \quad n = 1,2,3,\dots \\[6pt]
+E_{B,2D}^{(n)} = - \frac{R_X}{(n-\frac{1}{2})^2},\quad n = 1,2,3,\dots 
+\label{eq:exciton_rydberg}
+\end{flalign}
+$n$ is the principal quantum number, $E_{B,3D}^{(n)}$ is the exciton binding energy in three dimension and $E_{B,2D}^{(n)}$ is the binding energy in 2D plane.$R_X$ is the exciton Rydberg energy and can be expressed as 
+$R_X = \frac{\mu}{m_0\varepsilon_r^2}R_H$. $R_H$ is the Rydberg energy of the hydrogen atom(13.6 eV). $\mu$ refers to the reduced electron--hole mass and $\varepsilon_r$ is the relative dielectric
+constant. 
+The exciton binding energy and the electronic band gap would have the relationship shown as:
+\begin{equation}
+E_n = E_g-E_{B,2D/3D}^{(n)}
+\label{eq:optical gap}
+\end{equation}\vspace{-0.5em}
+where $E_g$ is the quasiparticle band gap, $E_n$ is the optical band gap when $n =1$. The corresponding exciton Bohr radius for the 1S exciton in 3D and 2D can be obtained as:
+\begin{align}
+a_{B,3D} &= \frac{4\pi \varepsilon_0 \varepsilon_r \hbar^2}{\mu e^2} 
+           = a_0 \cdot \frac{\varepsilon_r}{\mu/m_0} \\[6pt]
+a_{B,2D} &= \frac{2\pi \varepsilon_0 \varepsilon_r \hbar^2}{\mu e^2} 
+           = a_0 \cdot \frac{\varepsilon_r}{2\mu/m_0} 
+           = \frac{1}{2} a_{B,3D}
+\label{eq:exciton_bohr_radius}
+\end{align}
+The $a_0$ value refers to the atomic Bohr radius. 
+Compared to the 3D case, the 1s exciton confined to a 2D plane exhibits a binding energy that is enhanced by a factor of four.
+This can be understood that when the dimensionality is reduced from 3D to 2D, the exciton cannot spread out in all three spatial directions.
+Instead, the electron and hole are forced to remain in the same plane, which increases their spatial overlap. 
+This increased overlap enhance the Coulomb attraction, leading to a smaller Bohr radius and larger binding energy in the 2D plane.
+In real experiments, TMDs are typically studied in device structures encapsulated by dielectric hBN, which has a relatively low permittivity of about 3. 
+This weak screening further enhances the Coulomb interaction, resulting in a much larger exciton binding energy($\sim$ 500 meV) compared to that in GaAs quantum wells($\sim$ tens of meV).
+
+%Fig.1-4--------------
+\renewcommand{\baselinestretch}{1}
+\small\normalsize
+\begin{quote}
+\begin{figure}
+\begin{center}
+\includegraphics[width=1\textwidth]{Figures/C2/Fig.2-4_rydbergEx.jpg} % 
+\end{center}
+\caption[Rydberg exciton states in 2D TMDCs] {\textbf{Rydberg exciton states in 2D TMDCs.} \textbf{a,}Schematic of the bound electron hole pairs in 3D and 2D. The reduced dielectric screening and 2d plane confinement increase the quasiparitcle bandgap and the exciton binding energy. 
+\textbf{b,}Comparison of exciton energy from experiment and 2D hydrogen model. 
+Red lines are exciton states obtained from one-photon absorption and blue shaded region is from two-photon absorption corresponding to the p-states.Figures are adpated from[].}
+\label{fig.rydberg_Ex}
+\end{figure}
+\end{quote}
+\renewcommand{\baselinestretch}{2}
+\small\normalsize
+% --------------
+However, the conventional Coloumb potential form fails to reproduce the experimentally observed binding energies and non-hydrogenic exciton spectra in TMDs (Figure~\ref{fig.rydberg_Ex}b).
+This is due to the use of the constant dielectric constant $\varepsilon_r$ in the potential.
+In atomic thin layer, the electric field lines generated by an electron–hole pair extend partly within the 2D sheet and partly into the surrounding environment, which have a different permittivity.
+
+By considering the nonlocal dielectric screening, the electron--hole
+interaction can be more accurately described by the Rytova--Keldysh potential:
+\begin{equation}
+V_{\mathrm{eh}}(r) = -\frac{\pi e^2}{2 r_0} 
+\left[ H_0\!\left(\frac{r}{r_0}\right) - Y_0\!\left(\frac{r}{r_0}\right) \right],
+\label{eq:rytova}
+\end{equation}
+where $H_0$ and $Y_0$ are the Struve and Bessel functions, respectively.
+$r_0$ is the screening length determined by the 2D polarizability and the surrounding dielectric environment(3 to 6 nm in TMD). 
+At large electron--hole separations, $V_{eh}(r)$ scales in $1/r$ as the bare Coulomb interaction, while at shorter distances it exhibits a weaker $\log(r)$ dependence. 
+Solving Eq.~\eqref{eq:wannier} with $V(r) = V_{\mathrm{eh}}(r)$ yields binding energies of several hundred meV, consistent with experimental observations in monolayer MoS$_2$
+and WSe$_2$.
+
+In the presence of free carriers, excitons no longer behave as isolated two-particle quasiparticles. 
+Instead, they interact with the surrounding Fermi sea of electrons or
+holes, forming new excitation states known as polarons. 
+The polaron can be described as an exciton dressed by particle--hole excitations of the Fermi sea, shown as two different branches in the optical spectrum: an attractive polaron at lower energy and a repulsive polaron at higher energy.
+
+\subsection{Exciton in external Electric field}
+The motion of the exciton can be separated into two parts: the relative motion of the electron around the hole, which determines the binding energy and size of the exciton, and the center-of-mass (COM) motion of the exciton as a whole across the 2D plane  of the material.
+The corresponded coordinate is:
+$\mathbf r = \mathbf r_e - \mathbf r_h$ for relative motion
+and
+$\mathbf R = (m_e \mathbf r_e + m_h \mathbf r_h)/(m_e+m_h)$ for the COM motion, where $m_e$ and $m_h$ are the electron and hole effective masses. 
+The total Hamiltonian can be expressed as:
+\begin{equation}
+H \;=\; H_{\mathrm{rel}}(\mathbf r) \;+\; H_{\mathrm{COM}}(\mathbf R).
+\label{eq:exciton_split}
+\end{equation}
+The two respective Hamiltonian are:
+\begin{align}
+H_{\mathrm{rel}}(\mathbf r) &= -\frac{\hbar^2}{2\mu}\nabla_{\mathbf r}^2 
+- V(\mathbf r) \label{eq:H_rel}\\[6pt]
+H_{\mathrm{COM}}(\mathbf R) &= -\frac{\hbar^2}{2M}\nabla_{\mathbf R}^2 
++ V_{\mathrm{ext}}(\mathbf R) \label{eq:H_COM}
+\end{align}
+Eq.~\ref{eq:H_rel} is also mentioned in eq.~\ref{eq:wannier}.
+Solving this tells us how tightly the electron and hole are bound and what the size of the exciton is. 
+Eq.~\ref{eq:H_COM} governs the COM motion of the exciton, with total mass $M = m_e + m_h$. 
+When an external fields or potentials is involved, the exciton as a whole can be pushed around or trapped depending on the form of $V_{\mathrm{ext}}(\mathbf R)$. 
+And the kinetic energy of the exciton can be defined as:
+\begin{equation}
+E_{R}(k) = \frac{\hbar^{2}k^{2}}{2M}
+\label{eq:exciton_Ek}
+\end{equation}
+With $\mathbf{k = k_n+k_p}$. $\mathbf{k_n}, \mathbf{k_p}$ refers to the electron and hole momentum, respectively.
+
+An uniform electric field applied aligned with the TMD exciton couples directly to the electron--hole relative coordinate. 
+In this case, the excitonic Hamiltonian includes an additional term, so that the Wannier equation becomes:
+\begin{equation}
+\left[-\frac{\hbar^2}{2\mu}\nabla_{\mathbf r}^2 
+- \frac{e^2}{4\pi\varepsilon_0\varepsilon_r |\mathbf r|}
++ e \epsilon \mathbf r \right] \varphi(\mathbf r) 
+= E_r \varphi(\mathbf r),
+\label{eq:wannier_field}
+\end{equation}
+where $\mu$ is the reduced mass and $\epsilon$ is the electrostatic field. 
+In the weak-field regime, where the applied field is well below the dissociation threshold, the leading correction to the exciton energy is given by the quadratic Stark shift, then then energy shift of the 1s exciton depends on the field can be obtained in terms of:
+\begin{equation}
+\Delta E \;=\; -\frac{1}{2}\,\alpha_{1s} \epsilon^2
+\label{eq:stark_shift}
+\end{equation}
+where $\alpha$ is the 1s exciton polarizability.
+Accroding to this, this electric field induced finite dipole moment can be expressed as $\alpha_{1s} \epsilon$. 
+The exciton polarizability $\alpha$ is proportional to the exciton Bohr radius. 
+% In our case, the external perturbation is an electric field with a Gaussian spatial profile:
+% \begin{equation}
+% E(\mathbf R) = E_0 \exp\!\left(-\frac{R^2}{2\sigma^2}\right),
+% \label{eq:gaussian_field}
+% \end{equation}
+% where $E_0$ is the field amplitude and $\sigma$ is the characteristic width. 
+% Because the exciton has a finite polarizability $\alpha$, this field produces an effective potential for the COM motion of the form
+% \[
+% V_{\mathrm{ext}}(\mathbf R) \;\propto\; -\alpha |E(\mathbf R)|^2.
+% \]
+% This means that the exciton experiences a trap whose shape follows the Gaussian profile of the applied field. 
+% In physical terms, the exciton tends to move toward the region of strongest field, and if the field is localized, the exciton becomes confined in that region much like a particle in a potential well. 
+
+% It is important to emphasize that the Wannier equation for the relative motion remains essential in this situation. 
+% The internal solution determines key quantities such as the binding energy, dipole moment, and polarizability of the exciton. These parameters, in turn, set how strongly the exciton responds to the external field. 
+% Without solving the Wannier equation, one would not know the size or strength of the exciton, and the description of its confinement would be incomplete. 
+% Thus, the full picture combines both aspects: the internal exciton properties from $H_{\mathrm{rel}}$ and the COM dynamics under the external Gaussian field from $H_{\mathrm{COM}}$.
+
+\subsection{Light-matter interaction}
+The light-matter interaction can be described by the transition probabilities, which can be calculated through the Fermi'Golden rule:
+\begin{equation}
+\Gamma \;=\; \frac{2\pi}{\hbar}\, \big|\langle f \vert H^{\prime} \vert i \rangle\big|^2 \,
+\rho_{\mathrm{ph}}(\omega_n)
+\label{eq:fermi_golden_rule}
+\end{equation}
+where $\Gamma$ is the radiative decay rate,$\langle f \vert H^{\prime} \vert i \rangle$ is the matrix element with the electric dipole interaction Hamiltonian $H^{\prime} = -e \mathbf{r} \cdot \mathbf{E}$.
+$\lvert i\rangle$ and $\lvert f\rangle$ are the initial and final states, and $\rho_{\mathrm{ph}}(\omega_n)$ is the photonic density of states at the transition frequency. The matrix element is directly proportional to the oscillator strength $f_0$ as:
+\begin{equation}
+f_0 \;=\; \frac{2 m_0 \omega_n}{\hbar}\,\big|\langle f \vert \mathbf{r}\cdot\mathbf{E} \vert i \rangle\big|^2 \
+\label{eq:oscillator_strength}
+\end{equation}
+where $m_0$ is the free-electron mass, $\omega_n$ is the exciton transition frequency, $\hbar$ is the reduced Planck constant. 
+In the 2D system,for exciton to absorb or emit a photon, the in-plane momentum must be conserved during the process.
+A photon of frequency $\omega_n$ has wavevector magnitude
+$q =\frac{\omega_n}{c}$ whose in-plane component $q_{\parallel}$ is small near normal incidence. 
+An exciton with center-of-mass in-plane momentum $\mathbf K$ can couple directly to light only when its momentum matches the photon's in-plane momentum as $|\mathbf K| \;\le\; q_{\parallel}$.
+This defines the light cone that a narrow disk around
+$\mathbf K\!=\!0$ in momentum space. 
+Excitons inside the light cone are optically bright and can absorb/emit photons efficiently, whereas excitons outside the cone are dark with respect to direct radiative processes and must first scatter (e.g., by phonons or disorder) back into the lightcone to recombine.
+
+The exciton linewidth in directly related to the radiative decay rate, which is proportional to $1 / a_B^2$. Since TMD excitons have very small Bohr radius($\sim 1\,\ nm$), the calculated radiative broadening is on the order of 1 meV.
+This corresponds to ultrafast intrinsic lifetimes shorter than 1 ps, which is about two orders of magnitude faster than excitons in GaAs quantum wells. 
+Additional broadening occurs from exciton--phonon scattering, intervalley relaxation, and disorder-induced inhomogeneity, which typically increase with temperature.
+Inhomogeneous broadening originates from spatial variations in the local environment, including disorder, strain, and dielectric fluctuations, which create a distribution of resonance energies across the sample.
+In TMD, exciton linewidths are often dominated by inhomogeneous broadening from disorder, strain, and dielectric fluctuations. 
+Encapsulation in hBN provides a clean and uniform dielectric environment that suppresses these effects, allowing linewidths to approach the intrinsic homogeneous limit.
+
+% \subsection{Exciton-exciton interactions}
+\section{Exciton polaritons in strong coupled microcavity system}
+We have already discussed the Wannier-Mott excitons in the TMD system.
+Polaritons in transition-metal dichalcogenide (TMD) systems arise from the strong coupling between tightly bound excitons and confined cavity photons, forming hybrid light–matter quasiparticles. 
+Their large exciton binding energies and strong oscillator strengths enable robust polariton formation, even at elevated temperatures.
+The valley-selective optical response of TMD excitons further provides polaritons with spin–valley degrees of freedom.
+These features make TMD polaritons a promising platform for studying nonlinear interactions and quantum photonic phenomena.
+
+\subsection{Planar microcavity system}
+Polaritons are commonly studied in microcavities, where strong coupling between excitons and confined photons produces hybrid light–matter states. 
+The planar (1D) microcavity is the simplest geometry, with confinement only along the growth direction while allowing in-plane propagation, making it well suited for examining dispersion and spatial transport. 
+To realize this, a high quality-factor (Q) microcavity is essential, as it minimizes photon losses and prolongs the photon lifetime, thereby strengthening light–matter coupling and enhancing nonlinear polariton interactions. 
+
+A Fabry–Pérot cavity with distributed Bragg reflectors (DBRs) provides simple, well-defined modes, making it ideal for polariton studies in 2D materials.
+In this strcutrue, each DBR is formed by alternating two dielectric materials with a high refractive index contrast, with each layer thickness set to $l = \frac {\lambda}{4 n_0}$. 
+For light with a vacuum wavelength $\lambda$ satisfying this condition, multiple reflections at the interfaces interfere constructively, resulting in high reflectivity.
+Under this design, the DBR acts as a highly reflective mirror within a certain wavelength range, known as the stop band or photonic band. 
+If we have the DBR with $N$ pairs of high-($n_2$) and low-($n_1$) refractive index layers, in the normal incidence case, the intensity reflectivity can be approximated by:
+\begin{equation}
+  R \;=\;
+  \left[
+  \frac{ n_o \, n_2^{\,2N} \;-\; n_s \, n_1^{\,2N} }
+       { n_o \, n_2^{\,2N} \;+\; n_s \, n_1^{\,2N} }
+  \right]^2 
+\label{eq:DBR_R}
+\end{equation}
+where $n_o$ is the refractive index of the incident medium, $n_1$ $n_s$ is the index of the substrate. 
+\\The normalized stopband width around the central frequency
+$f_0 = c/\lambda_0$ is:
+\begin{equation}
+  \frac{\Delta f_0}{f_0}
+  \;=\;
+  \frac{4}{\pi}\,\arcsin\!\left(\frac{n_2-n_1}{n_2+n_1}\right).
+  \label{eq:DBR_bw}
+\end{equation}\vspace{-0.5em}
+Figure~\ref{fig.DBR} shows the simulated reflectance spectrum and the cross-section SEM of the bottom DBR we used in chapter 6. 
+%Fig.5--------------
+\renewcommand{\baselinestretch}{2}
+\small\normalsize
+\begin{quote}
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.9\textwidth]{Figures/C2/Fig.2-5_DBR.jpg} 
+\end{center}
+\caption[Structure of the sputtered DBR reviled by the cross section SEM and the reflectance spectrum calculated by TMM method.] {Structure of the sputtered DBR reviled by the cross section SEM \textbf{a} and the reflectance spectrum calculated by TMM method \textbf{b}.}
+\label{fig.DBR}
+\end{figure}
+\end{quote}
+\renewcommand{\baselinestretch}{2}
+\small\normalsize
+% --------
+The cavity mode with the resonance at $\lambda_0$ can be formed by placing two DBRs with a separation corresponding to an optical thickness of $l_c = n\frac {\lambda}{2 n_0}$. Where $n$ is an integer. 
+In this Fabry--P\'erot microcavity, the optical field is confined only in the $z$ direction but free in the $x$--$y$ plane. 
+The distribution of the standing wave can be calculated by the transfer matrix method(see in Chapter 3). 
+
+In the 1D microcavity, the cavity photon exhibits an in-plane energy dispersion as a function of the in-plane wavevector $k_{\parallel}$:
+\begin{equation}
+E_{\mathrm{cav}} = \frac{\hbar c}{n_c} \sqrt{k_{\parallel}^2 + k_{\perp}^2},
+\label{eq:cavity_dispersion}
+\end{equation}
+\vspace{-0.5em}
+where the longitudinal wavevector is 
+\vspace{-0.5em}
+\begin{equation}
+k_{\perp} = \frac{2\pi n_c}{\lambda}.
+\label{eq:k_perp}
+\end{equation}\vspace{-0.5em}
+Given a photon incident angle $\theta$, the in-plane component of the wavevector can be approximated as:
+\begin{equation}
+k_{\parallel} \approx \frac{2\pi}{\lambda} \, \theta, 
+\qquad \text{when } k_{\parallel} \ll k_{\perp}.
+\label{eq:k_parallel}
+\end{equation}\vspace{-0.5em}
+Thus, the cavity energy can be expressed in a parabolic form as
+\begin{equation}
+E_{\mathrm{cav}} \approx \frac{\hbar c}{n_c} k_{\perp} 
++ \frac{\hbar^2 k_{\parallel}^2}{2 m_{\mathrm{cav}}},
+\label{eq:cavity_parabola}
+\end{equation}
+where $m_{\mathrm{cav}}$ is the effective photon mass of the cavity mode.
+
+\subsection{Strong coupling exciton polaritons}
+The fundamental TE mode has its electric field within the cavity plane (transverse to $z$), matching the in-plane transition dipole of bright TMD excitons. 
+According to the Fermi’s golden rule, the transition rate $\Gamma_{\omega}$ can be expressed as:
+\begin{equation}
+\Gamma(\omega)\;\propto\; \big|\langle X|\,(-\mathbf{d}\!\cdot\!\mathbf{E})\,|0\rangle\big|^{2}\,\rho(\omega)
+= \big|\mathbf{d}\big|^{2}\,\big|\mathbf{E}\big|^{2}\,\kappa^{2}\,\rho(\omega),
+\qquad \kappa \equiv \hat{\mathbf{d}}\!\cdot\!\hat{\mathbf{E}},
+\end{equation}
+Thus the alignment ($\kappa\!=\!1$) maximizes the $\Gamma$ for the TE mode.
+where $\mathbf d$ is the exciton transition dipole, $\mathbf E$ is the cavity field at the monolayer, $\rho(\omega)$ is the photonic density of states, and $\kappa\equiv \hat{\mathbf d}\!\cdot\!\hat{\mathbf E}$ is the polarization (orientation) factor; TE polarization gives $\kappa\simeq 1$, whereas TM fields with an out-of-plane component reduce $\kappa$.
+In cavity QED, the vacuum Rabi coupling for a single exciton to the cavity photon can be expressed by the coupling coefficient $g_1$ as:
+\begin{equation}
+g_1 \;=\; \frac{1}{\hbar}\,\big|\mathbf{d}\!\cdot\!\mathbf{E}_{\rm vac}\big|
+\;=\; \frac{|\mathbf{d}|}{\hbar}\,\sqrt{\frac{\hbar\omega_c}{2\varepsilon_0 \varepsilon_b V_{\rm eff}}}\;\kappa,
+\end{equation}
+where $V_{\rm eff}\!\approx\!A\,L_{\rm eff}$ for a planar cavity, $\varepsilon_b$ is the background permittivity, and $\kappa$ is the polarization (orientation) factor. 
+The effective cavity length $L_{\rm eff}$ consist of the cavity spacer length $L_{\rm eff}$ and the field penetration length $L_{\rm DBR}$, which is given by:
+\begin{equation}
+\ell_{\mathrm{eff}} = \frac{\lambda_0}{2}\,
+\frac{n_{\mathrm{1}}\,n_{\mathrm{2}}}{\,n_0\,(\,n_{\mathrm{2}} - n_{\mathrm{2}}\,)} \, 
+\end{equation}\vspace{-0.5em}
+For the 2D exciton sheet, we assume there are $N$ numbers of exciotns within the mode area and can coherently couple to the cavity mode. 
+This collective coupling strength can be expressed as:
+\begin{equation}
+g_{\rm 0} \;=\; \sqrt{N}\,g_1 \;\;\Rightarrow\;\;
+\hbar\Omega_R \;=\; 2 g_{\rm 0}
+\end{equation}\vspace{-0.5em}
+The resulting hybrid light–matter quasiparticles are cavity polaritons. 
+And when we looking at the exciton-polairton Hamiltonian, the microscopic coupling $g_{\rm 0}$ appears as the off-diagonal term at fixed in-plane wavevector $k_{\parallel}$:
+\begin{equation}
+\begin{aligned}
+\hat H_{\mathrm{pol}}
+&= \hat H_{\mathrm{cav}}+\hat H_{\mathrm{exc}}+\hat H_{\mathrm{int}} \\
+&= \sum\!\
+  E_{\mathrm{cav}}(k_\parallel)\,\hat a_{k_\parallel}^{\dagger}\hat a_{k_\parallel}
+ +\sum\!\
+  E_{\mathrm{exc}}(k_\parallel)\,\hat b_{k_\parallel}^{\dagger}\hat b_{k_\parallel}
+ +\sum\!\
+  g_0\big(\hat a_{k_\parallel}^{\dagger}\hat b_{k_\parallel}
+         +\hat b_{k_\parallel}^{\dagger}\hat a_{k_\parallel}\big)
+\end{aligned}\
+\label{eq:H_polariton}
+\end{equation}
+where $\hat{a}^{\dagger}_{k_{\parallel}}$ ($\hat{b}^{\dagger}_{k_{\parallel}}$) creates a cavity photon (exciton) with in-plane wavevector $k_{\parallel}$, $E_{\mathrm{cav}}(k_{\parallel})$ and $E_{\mathrm{exc}}(k_{\parallel})$ are the bare dispersions, and $g_0$ is the light–matter coupling strength (enhanced by the cavity field and the excitonic oscillator strength).
+
+In the strong-coupling regime (i.e., when the coherent coupling $g_0$ exceeds the relevant photon and exciton dissipation rates), the eigenmodes are coherent superpositions of the bare photon and exciton. 
+The transformation to the lower/upper polariton operators is given by the Hopfield mixing:
+\begin{equation}
+\begin{pmatrix}
+\hat{p}_{k_{\parallel}} \\
+\hat{q}_{k_{\parallel}}
+\end{pmatrix}
+=
+\begin{pmatrix}
+C_{k_{\parallel}} & X_{k_{\parallel}} \\
+X_{k_{\parallel}} & -\,C_{k_{\parallel}}
+\end{pmatrix}
+\begin{pmatrix}
+\hat{a}_{k_{\parallel}} \\
+\hat{b}_{k_{\parallel}}
+\end{pmatrix},
+\qquad
+|C_{k_{\parallel}}|^{2}+|X_{k_{\parallel}}|^{2}=1,
+\label{eq:Hopfield}
+\end{equation}
+where $|C_{k_{\parallel}}|^{2}$ and $|X_{k_{\parallel}}|^{2}$ quantify the photonic and excitonic fractions, respectively. It can be defined as:
+\begin{equation}\
+\lvert X_{k_\parallel}\rvert^{2}
+= \frac{1}{2}\!\left(
+1 + \frac{\Delta E(k_\parallel)}{\sqrt{[\Delta E(k_\parallel)]^{2}+4 g_0^{2}}}
+\right)
+\end{equation}
+
+\begin{equation}\
+\lvert C_{k_\parallel}\rvert^{2}
+= \frac{1}{2}\!\left(
+1 - \frac{\Delta E(k_\parallel)}{\sqrt{[\Delta E(k_\parallel)]^{2}+4 g_0^{2}}}
+\right)
+\end{equation}
+Diagonalizing Eq.~\eqref{eq:H_polariton} yields the lower (LP) and upper (UP) polariton energies:
+\begin{equation}
+E_{\mathrm{LP,UP}}(k_{\parallel})
+=
+\frac{E_{\mathrm{cav}}(k_{\parallel}) + E_{\mathrm{exc}}(k_{\parallel})}{2}
+\;\pm\;
+\frac{1}{2}\sqrt{\big[E_{\mathrm{cav}}(k_{\parallel}) - E_{\mathrm{exc}}(k_{\parallel})\big]^2 + 4 g_0^{\,2}}\, 
+\label{eq:LP_UP}
+\end{equation}
+From this we can see that when the cavity is on resonance with the exciton frequency (zero detuning), the energy splitting between the lower and upper polariton branch would be $2g_0$. This is also called the vacuum Rabi splitting.
+The detuning between the uncoupled modes is defined as:
+\begin{equation}
+\Delta(k_{\parallel}) \;\equiv\; E_{\mathrm{cav}}(k_{\parallel}) - E_{\mathrm{exc}}(k_{\parallel}) .
+\label{eq:detuning}
+\end{equation}
+At zero detuning ($\Delta=0$),the polaritons are half-light, half-matter ($|C_{k_{\parallel}}|^{2}=|X_{k_{\parallel}}|^{2}=1/2$).
+%Fig.1-4--------------
+\renewcommand{\baselinestretch}{1}
+\small\normalsize
+\begin{quote}
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Figures/C2/Fig.2-6_polariton_detune.jpg} % 
+\end{center}
+\caption[Exciton polariton dispersions and the Hopfield coefficent for lower polariton at different detuning $\Delta$] {\textbf{Exciton polariton dispersions and the Hopfield coefficent for lower polariton at different detunings.} \textbf{a,} $\Delta= 2 g_0$; \textbf{b,} $\Delta\ = 0$; \textbf{c,} $\Delta\ = -2g_0$.
+Figures are adpated from[].}
+\label{fig.rydberg_Ex}
+\end{figure}
+\end{quote}
+\renewcommand{\baselinestretch}{2}
+\small\normalsize
+% --------------
+Equivalently, using the 2D oscillator strength per area $f_{2\mathrm{D}}$, we can have the Rabi splitting as:
+\begin{equation}
+\Omega_R^{2} \;\propto\; \frac{f_{2\mathrm{D}}}{\varepsilon_b\,L_{\rm eff}}\,\kappa^{2}
+\end{equation}
+This shows that the in-plane TE polarization ($\kappa\!\approx\!1$) maximizes $\Omega_R$, and larger $f_{2\mathrm{D}}$ and smaller $L_{\rm eff}$ would further increase the Rabi splitting. 
+Since the planar (1D) cavity provides an in-plane TE field aligned to the TMD intralayer exciton dipole, the dipole–field overlap $\lvert\mathbf d\!\cdot\!\mathbf E\rvert$ is maximized. 
+Leveraging the monolayer’s large oscillator strength and the enhancement at the field antinode, the strong coupling regime is easy to access in the TMD embedded microcavity system, even with limited quality factor. 
+The strong coupling is obtained when
+\begin{equation}
+2 g_{\rm 0} \;>\; \frac{1}{2}\big(\gamma_{\rm cav} + \gamma_{exciton}\big)
+\end{equation}
+where $\gamma_{\rm cav}$ and $\gamma_{exciton}$ are the cavity and exciton linewidths.
+% \smallskip
+
+
