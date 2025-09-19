@@ -424,7 +424,7 @@ g_1 \;=\; \frac{1}{\hbar}\,\big|\mathbf{d}\!\cdot\!\mathbf{E}_{\rm vac}\big|
 \;=\; \frac{|\mathbf{d}|}{\hbar}\,\sqrt{\frac{\hbar\omega_c}{2\varepsilon_0 \varepsilon_b V_{\rm eff}}}\;\kappa,
 \end{equation}
 where $V_{\rm eff}\!\approx\!A\,L_{\rm eff}$ for a planar cavity, $\varepsilon_b$ is the background permittivity, and $\kappa$ is the polarization (orientation) factor. 
-The effective cavity length $L_{\rm eff}$ consist of the cavity spacer length $L_{\rm eff}$ and the field penetration length $L_{\rm DBR}$, which is given by:
+The effective cavity length $L_{\rm eff}$ consist of the cavity spacer length $L_{\rm eff}$ and the field penetration length $L_{\rm DBR}$, which is given by\cite{Rahimi-Iman2020-tt,Savona1995-vn}:
 \begin{equation}
 \ell_{\mathrm{eff}} = \frac{\lambda_0}{2}\,
 \frac{n_{\mathrm{1}}\,n_{\mathrm{2}}}{\,n_0\,(\,n_{\mathrm{2}} - n_{\mathrm{2}}\,)} \, 
@@ -436,7 +436,7 @@ g_{\rm 0} \;=\; \sqrt{N}\,g_1 \;\;\Rightarrow\;\;
 \hbar\Omega_R \;=\; 2 g_{\rm 0}
 \end{equation}\vspace{-0.5em}
 The resulting hybrid light–matter quasiparticles are cavity polaritons. 
-And when we looking at the exciton-polairton Hamiltonian, the microscopic coupling $g_{\rm 0}$ appears as the off-diagonal term at fixed in-plane wavevector $k_{\parallel}$:
+And when we looking at the exciton-polairton Hamiltonian, the microscopic coupling $g_{\rm 0}$ appears as the off-diagonal term at fixed in-plane wavevector $k_{\parallel}$\cite{Rahimi-Iman2020-tt,Deng2010-ul}:
 \begin{equation}
 \begin{aligned}
 \hat H_{\mathrm{pol}}
@@ -454,7 +454,7 @@ And when we looking at the exciton-polairton Hamiltonian, the microscopic coupli
 where $\hat{a}^{\dagger}_{k_{\parallel}}$ ($\hat{b}^{\dagger}_{k_{\parallel}}$) creates a cavity photon (exciton) with in-plane wavevector $k_{\parallel}$, $E_{\mathrm{cav}}(k_{\parallel})$ and $E_{\mathrm{exc}}(k_{\parallel})$ are the bare dispersions, and $g_0$ is the light–matter coupling strength (enhanced by the cavity field and the excitonic oscillator strength).
 
 In the strong-coupling regime (i.e., when the coherent coupling $g_0$ exceeds the relevant photon and exciton dissipation rates), the eigenmodes are coherent superpositions of the bare photon and exciton. 
-The transformation to the lower/upper polariton operators is given by the Hopfield mixing:
+The transformation to the lower/upper polariton operators is given by the Hopfield mixing\cite{Rahimi-Iman2020-tt,Deng2010-ul}:
 \begin{equation}
 \begin{pmatrix}
 \hat{p}_{k_{\parallel}} \\
@@ -473,7 +473,7 @@ X_{k_{\parallel}} & -\,C_{k_{\parallel}}
 |C_{k_{\parallel}}|^{2}+|X_{k_{\parallel}}|^{2}=1,
 \label{eq:Hopfield}
 \end{equation}
-where $|C_{k_{\parallel}}|^{2}$ and $|X_{k_{\parallel}}|^{2}$ quantify the photonic and excitonic fractions, respectively. It can be defined as:
+where $|C_{k_{\parallel}}|^{2}$ and $|X_{k_{\parallel}}|^{2}$ quantify the photonic and excitonic fractions, respectively. It can be defined as\cite{Rahimi-Iman2020-tt,Deng2010-ul}:
 \begin{equation}\
 \lvert X_{k_\parallel}\rvert^{2}
 = \frac{1}{2}\!\left(
@@ -487,7 +487,7 @@ where $|C_{k_{\parallel}}|^{2}$ and $|X_{k_{\parallel}}|^{2}$ quantify the photo
 1 - \frac{\Delta E(k_\parallel)}{\sqrt{[\Delta E(k_\parallel)]^{2}+4 g_0^{2}}}
 \right)
 \end{equation}
-Diagonalizing Eq.~\eqref{eq:H_polariton} yields the lower (LP) and upper (UP) polariton energies:
+Diagonalizing Eq.~\eqref{eq:H_polariton} yields the lower (LP) and upper (UP) polariton energies\cite{Rahimi-Iman2020-tt,Deng2010-ul}:
 \begin{equation}
 E_{\mathrm{LP,UP}}(k_{\parallel})
 =
@@ -497,7 +497,7 @@ E_{\mathrm{LP,UP}}(k_{\parallel})
 \label{eq:LP_UP}
 \end{equation}
 From this we can see that when the cavity is on resonance with the exciton frequency (zero detuning), the energy splitting between the lower and upper polariton branch would be $2g_0$. This is also called the vacuum Rabi splitting.
-The detuning between the uncoupled modes is defined as:
+The detuning between the uncoupled modes is defined as\cite{Deng2010-ul}:
 \begin{equation}
 \Delta(k_{\parallel}) \;\equiv\; E_{\mathrm{cav}}(k_{\parallel}) - E_{\mathrm{exc}}(k_{\parallel}) .
 \label{eq:detuning}
@@ -512,21 +512,21 @@ At zero detuning ($\Delta=0$),the polaritons are half-light, half-matter ($|C_{k
 \includegraphics[width=0.8\textwidth]{Figures/C2/Fig.2-6_polariton_detune.jpg} % 
 \end{center}
 \caption[Exciton polariton dispersions and the Hopfield coefficent for lower polariton at different detuning $\Delta$] {\textbf{Exciton polariton dispersions and the Hopfield coefficent for lower polariton at different detunings.} \textbf{a,} $\Delta= 2 g_0$; \textbf{b,} $\Delta\ = 0$; \textbf{c,} $\Delta\ = -2g_0$.
-Figures are adpated from[].}
+Figures are adpated from\cite{Deng2010-ul}.}
 \label{fig.rydberg_Ex}
 \end{figure}
 \end{quote}
 \renewcommand{\baselinestretch}{2}
 \small\normalsize
 % --------------
-Equivalently, using the 2D oscillator strength per area $f_{2\mathrm{D}}$, we can have the Rabi splitting as:
+Equivalently, using the 2D oscillator strength per area $f_{2\mathrm{D}}$, we can have the Rabi splitting as\cite{Savona1995-vn}:
 \begin{equation}
 \Omega_R^{2} \;\propto\; \frac{f_{2\mathrm{D}}}{\varepsilon_b\,L_{\rm eff}}\,\kappa^{2}
 \end{equation}
 This shows that the in-plane TE polarization ($\kappa\!\approx\!1$) maximizes $\Omega_R$, and larger $f_{2\mathrm{D}}$ and smaller $L_{\rm eff}$ would further increase the Rabi splitting. 
-Since the planar (1D) cavity provides an in-plane TE field aligned to the TMD intralayer exciton dipole, the dipole–field overlap $\lvert\mathbf d\!\cdot\!\mathbf E\rvert$ is maximized. 
-Leveraging the monolayer’s large oscillator strength and the enhancement at the field antinode, the strong coupling regime is easy to access in the TMD embedded microcavity system, even with limited quality factor. 
-The strong coupling is obtained when
+Since the planar (1D) cavity provides an in-plane TE field aligned to the TMD intralayer exciton dipole, the dipole–field overlap $\lvert\mathbf d\!\cdot\!\mathbf E\rvert$ is maximized\cite{Gerry2024-aa,Fox2006-hp}. 
+Leveraging the monolayer’s large oscillator strength and the enhancement at the field antinode, the strong coupling regime is easy to access in the TMD embedded microcavity system, even with limited quality factor\cite{Liu2015-hm}. 
+The strong coupling is obtained when\cite{Rahimi-Iman2020-tt,Deng2010-ul}
 \begin{equation}
 2 g_{\rm 0} \;>\; \frac{1}{2}\big(\gamma_{\rm cav} + \gamma_{exciton}\big)
 \end{equation}
