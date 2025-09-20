@@ -3,6 +3,8 @@
 \renewcommand{\thechapter}{5}
 
 \chapter{Interlayer exciton and optical nonlinearity of Fermi polaron in Trilayer WSe$_2$}
+\label{chap5}
+
 Realizing strong nonlinear optical responses is a long-standing goal of both fundamental and technological importance. Recently significant efforts have focused on exploring excitons in solids to achieve nonlinearities even down to few-photon levels. 
 However, a crucial tradeoff arises as strong light-matter interactions require large oscillator strength and short radiative lifetime of excitons, which limits their nonlinearity. 
 Here we experimentally demonstrate strong nonlinear optical responses with large oscillator strength by exploiting the coupling between excitons and carriers in an atomically thin semiconductor. 
@@ -117,7 +119,7 @@ We note that the levels are not fully avoided and there is always finite reflect
 \begin{quote}
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.85\textwidth]{Figures/C5/Fig5_3.jpg} % 
+\includegraphics[width=0.8\textwidth]{Figures/C5/Fig5_3.jpg} % 
 \end{center}
 \caption[Analysis of anti-crossing between IX$_D$ and X$_A$ in device D1.] {\textbf{Analysis of anti-crossing between IX$_D$ and X$_A$ in device D1.} 
 \textbf{a}, Reflectance spectra ($R/R_{0}$) as a function of the electric field near the anti-crossing region.  
@@ -343,7 +345,9 @@ In all cases, which include \textbf{(a)} intrinsic, \textbf{(b)} hole-doping, an
 
 \subsection{Discussions}
 The observed optical nonlinearity and their doping dependence cannot be simply explained by heating or carrier injection from the laser since both effects result in redshift of the intralayer excitons (Figures~\ref{fig.5.5}a and~\ref{fig.5.9}). 
-Therefore, we examine how the interactions among the elementary excitations in the systems, \textit{i.e.}, intralayer excitons X$_A$, momentum-indirect excitons X$_I$, and free carriers, may give rise to the observed nonlinearity. 
+Therefore, we examine how the interactions among the elementary excitations in the systems, \textit{i.e.}, intralayer excitons X$_A$, momentum-indirect excitons X$_I$, and free carriers, may give rise to the observed nonlinearity.
+
+\subsubsection{Estimation of exciton interaction strength}
 First, we extract a large interaction strength $g \sim 2~\mathrm{meV}\,\mu\mathrm{m}^{2}$ from the linear fit of energy blueshift vs.\ X$_A^+$ density at low power~\cite{ref30} (Figure~\ref{fig.5.8}). 
 It is apparent that excitonic interactions (i.e.\ between X$_A$--X$_A$ and X$_A$--X$_I$) alone cannot produce the observed nonlinearity. 
 On the one hand, the X$_A$--X$_A$ interactions among intralayer excitons are repulsive but weak, which scales linearly with density with a coefficient of $g_{\mathrm{ex}}\sim \alpha E_B R^{2}\sim 1.9~\mu\mathrm{eV}\,\mu\mathrm{m}^{2}$, where $\alpha$ is a constant ($\sim 6$), $E_B \approx 100~\mathrm{meV}$ is the exciton binding energy and $R$ ($\sim 1.78~\mathrm{nm}$) denotes the exciton Bohr radius in trilayers~\cite{ref31}. 
@@ -379,6 +383,8 @@ At an electric field of 0.12 V/nm, a maximum blue shift in a value of 3.3 meV of
 \renewcommand{\baselinestretch}{2}
 \small\normalsize
 % %///////////////////////
+
+\subsubsection{Nonlinearity due to valley polarization}
 Therefore, we attribute the observed nonlinearity to a valley polarization created from the interactions between X$_A$ and free carriers. 
 In particular, excitons created by optical pumping may induce a nonequilibrium valley population imbalance of resident carriers between $K$ and $\Gamma$ valleys, via mechanisms such as exciton--carrier scattering~\cite{ref34,ref35}. 
 Importantly, under zero electric field, the energy difference between $K$ and $\Gamma$ valleys is rather small in trilayers~\cite{ref22}, on the order of tens of millielectronvolts, based on first-principle calculations and transport studies (Figure~\ref{fig.5.11}a). 
@@ -440,12 +446,98 @@ The resulting population imbalance between $K$ and $K'$ causes different amounts
 \renewcommand{\baselinestretch}{2}
 \small\normalsize
 % %///////////////////////
+The proposed valley polarization mechanism also explains the strong electron--hole asymmetry of optical nonlinearity. 
+Intrinsic trilayer WSe$_2$ exhibit weak nonlinearity, since no valley polarization can be created without resident carriers. 
+In the electron-doped case, the valley polarization of resident carriers is prevented by the much larger energy splitting, on the order of hundreds of millielectronvolts, between $Q$ (band minimum) and the $K$ valleys (where X$_A$ resides) in the conduction band~\cite{ref22}. 
+We also briefly note that in TMD monolayers, optical pumping with circularly polarized light can polarize carriers in $K$ vs.\ $K'$ valleys~\cite{ref32,ref33,ref34,ref35,ref36,ref37,ref38}. 
+The generation of valley imbalance in monolayers has been attributed to mechanisms such as different inter-valley vs.\ intra-valley carrier relaxation rates, and different indirect excitons and spin-forbidden dark excitons relaxation rates~\cite{ref39,ref40}. 
+Unlike in monolayers, where a spin flip of carriers is required for scattering between $K$ and $K'$ valleys, the $\Gamma$ point is spin-degenerate so that the intervalley scattering between $K$ and $\Gamma$ in trilayers can happen via a spin-conserving process, such as direct Coulomb and exchange interactions between holes and excitons. 
+We note that X$_I$ likely plays a crucial role in exciton--electron scattering owing to their larger population than X$_A$ (see Figure~\ref{fig.5.10} for estimated X$_I$ density). 
+Since relaxation processes of X$_A \rightarrow$ X$_I$ and X$_I \rightarrow$ ground state both involve finite momentum transfer, they can facilitate the valley polarization process via exciton--carrier scattering. 
+This suggests that the dynamics of valley polarization could occur at a timescale similar to the X$_I$ lifetime, on the order of nanoseconds, which may explain our observation of weaker nonlinearity created by the pulsed laser compared to CW excitation with the same peak power (Figure~\ref{fig.5.8}).
 
+To further corroborate our hypothesis, we control the relative energies of $\Gamma$ and $K$ valleys by applying an external electric field~\cite{ref20,ref22}, and study the resulting changes in both the energies and optical nonlinearity of Fermi polarons. 
 
+First, we measure the reflectance of the X$_A^+$ and X$_A^-$ as we change the electric field under fixed doping levels (Figures~\ref{fig.5.13}a,b). 
+With an increasing field, the energy of the X$_A^+$ blueshifts at a smaller electric field and then switches to a redshift above an electric field of $\sim$0.05~V/nm (Figure~\ref{fig.5.13}a). 
+The electric field shifts the valence band maximum from $\Gamma$ to $K$ due to the distinct orbital characters of the eigenstates~\cite{ref22}. 
+While the eigenstate at $K$ becomes layer-polarized with higher energies with the field, the wavefunction at the $\Gamma$ point features large interlayer coupling with only small energy changes under the field~\cite{ref22}.
+This shift from $\Gamma$ to $K$ leads to more phase-space filling in $K$ and a blueshift of X$_A^+$, consistent with our proposed mechanism for optical nonlinearity (Figure~\ref{fig.5.14}). 
+Above an electric field of $\sim$0.05~V/nm, X$_A^+$ begins to redshift. 
+This electric field is comparable to the critical field under which the band edge shifts from $\Gamma$ to $K$, as determined from transport studies~\cite{ref22} (note that the literature-reported field differs from our definition by a factor of the relative dielectric constant). 
 
+In stark contrast, the energy shift of the X$_A^-$ is much smaller in the electron-doped region (Figure~\ref{fig.5.13}b), where the band edge remains at the $Q$ point. 
+The small energy variation of X$_A^-$ can be explained by the avoided crossing, similar to the undoped case.
 
+%////////////////////////////Figure Panel//////////////////
+%Fig.5.13--------------
+\renewcommand{\baselinestretch}{1}
+\small\normalsize
+\begin{quote}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=1\textwidth]{Figures/C5/Fig5_13.jpg} % 
+\end{center}
+\caption[Electric-field dependent exciton energy and nonlinearity in homotrilayer WSe$_2$ at $T = 4$~K.] 
+{\textbf{Electric-field dependent exciton energy and nonlinearity in homotrilayer WSe$_2$ at $T = 4$~K.} \textbf{a, b}, Electric-field dependence of the intralayer Fermi polaron reflectance contrast $R/R_{0}$ in trilayer with \textbf{(a)} hole and \textbf{(b)} electron doping density of $4.9 \times 10^{12}$~cm$^{-2}$. 
+\textbf{c}, Reflectance change induced by a pulsed laser excitation of 12~$\mu$W power. 
+The color map is obtained the same way as Figure~\ref{fig.5.6} d. 
+Under a small electric field, X$_A^+$ shows a blueshift but it begins to redshift under excitation at higher electric fields. 
+\textbf{d}, Line plots of the X$_A^+$ power-dependent peak shift under different electric fields. 
+The X$_A^+$ shows a blueshift of $\sim$10~meV under zero applied electric field and a redshift of similar magnitude under large electric fields. 
+The corresponding electric fields for these linecuts are indicated by the dashed lines in \textbf{(c)}. 
+The error bars represent the uncertainty in determining the peak energy when fitting the reflection data. 
+\textbf{e, f}, An electric field induces a shift of the valence band edge from $\Gamma$ to $K$ valley. 
+Under strong optical pumping, a net valley polarization is induced by exciton--carrier scattering with increased carriers at the $\Gamma$ point, which leads to the optically induced redshift of X$_A^+$ at higher electric fields. 
+In the nonequilibrium states, the dashed lines are used as indications for the carrier populations, and do not represent the Fermi level.}
+\label{fig.5.13}
+\end{figure}
+\end{quote}
+\renewcommand{\baselinestretch}{2}
+\small\normalsize
+% %/////////////////////// 
 
+Intriguingly, the electric field also dramatically changes the nonlinear responses of X$_A^+$. 
+As shown in Figure~\ref{fig.5.13}c, the reflectance change induced by optical pumping, $\Delta R/R$, shows a clear flip in the color contrast at $\sim$0.05~V/nm, which coincides with the crossover field between the blueshift and redshift of X$_A^+$ in Figure~\ref{fig.5.13}a. 
+The magnitude of the blueshift and redshift is similar under the same excitation conditions, around 10~meV (Figure~\ref{fig.5.13}d). 
+Such electric-field control of optical nonlinearity provides additional supporting evidence for our proposed mechanism involving valley polarization (Figures~\ref{fig.5.13} e,f). 
+Figure~\ref{fig.5.13} e shows the modified band structure above the critical field~\cite{ref22}. 
+Under optical excitation, the same exciton--hole scattering process can induce a population transfer of holes from $K$ to $\Gamma$, and reduce the X$_A^+$ energies (Figure~\ref{fig.5.13} f). 
+This also explains the similar critical electric fields where both nonlinearity and electric-field susceptibility turn from blue- to redshift.
 
+%////////////////////////////Figure Panel//////////////////
+%Fig.5.14--------------
+\vspace{2em}
+\renewcommand{\baselinestretch}{2}
+\small\normalsize
+\begin{quote}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=1\textwidth]{Figures/C5/Fig5_14.jpg} % 
+\end{center}
+\caption[Electric-field tuning of Fermi polarons.] 
+{\textbf{Electric-field tuning of Fermi polarons.} 
+\textbf{a}, Energy shift of X$_A^-$ and X$_A^+$ with applied electric field at constant doping. 
+The electron and hole doping densities are both kept at $4.9 \times 10^{12}$~cm$^{-2}$. 
+The peak position is obtained by fitting the reflectance spectra with a Lorentzian model. 
+The error bars represent the variance of the fitted peak energy.  
+\textbf{b, c}, Doping dependence of the intralayer Fermi polaron reflectance contrast $R/R_{0}$ in trilayer with applied \textbf{(b)} 0.03~V/nm, \textbf{(c)} 0.05~V/nm electric field. 
+The negative doping density represents the hole-doped side. 
+An obvious blueshift and broadening of X$_A^+$ is observed on the hole side with increasing electric field, corresponding to additional phase-space filling due to the population transfer from $\Gamma$ to $K$ valleys. 
+Such a shift is much weaker on the electron side.}
+\label{fig.5.14}
+\end{figure}
+\end{quote}
+\renewcommand{\baselinestretch}{2}
+\small\normalsize
+% %/////////////////////// 
+
+\newpage
 \section{Conclusions}
-
-
+Our results demonstrating highly nonlinear excitons with large oscillator strengths open avenues for engineering exciton--carrier interactions in atomically thin heterostructures to explore strongly interacting many-body physics and develop novel optoelectronics. 
+By designing the atomic and electronic structures of the heterostructures, one may engineer the strong interactions between bright, dark excitons, and free charges~\cite{ref26}. 
+The excitonic and free charge populations are highly tunable, and elucidating the complex interactions between intralayer, interlayer excitons, and charges will be of significant future interest for studying many-body physics in a hybrid Fermi--Bose system~\cite{ref41,ref42,ref43}, from both theoretical and experimental perspectives. 
+These strongly interacting optical excitations can be used to realize active nonlinear metasurfaces based on spatial confinement of excitons by moiré superlattices and local electrostatic gates~\cite{ref44,ref45,ref46}. 
+Combining strong nonlinearity with spatial confinement could also further boost nonlinearity and allow exploring quantum optical effects, including nonclassical light sources and few-photon nonlinearity~\cite{ref11,ref47}. 
+While current experiments require $10^3$--$10^4$ photons to shift the resonance by a linewidth, improving materials quality and engineering the photonic environment could lower the required photon count significantly by reducing the Fermi polaron linewidth. 
+Finally, the demonstrated optical control of exciton resonances could enable novel nonlinear optoelectronic devices such as all-optical switching, nonlinear optomechanical resonators~\cite{ref48,ref49}, and optical limiting devices~\cite{ref4,ref50}.
