@@ -5,11 +5,16 @@
 \chapter{Experimental Methods}
 \label{chap3}
 
-In this chapter, I will introduce the fabrication and metrology methods used throughout this thesis. In section
+In this chapter, I present the fabrication and metrology methods employed throughout this thesis. 
+Section~\ref{sec:van der Waals heterostructure Fabrication} describes the details of the fabrication process for dual-gate FET van der Waals heterostructure and outlines the basic electrostatic model.
+Section~\ref{1D microcavity} introduces the transfer matrix method (TMM) simulations that will be used in Chapter~\ref{chap6}.
+Section~\ref{sec:Metrology} discusses the working principle of Piezoresponse Force Microscopy (PFM) and the experimental details relevant to Chapter~\ref{chap4}. 
+Finally, Section~\ref{sec:Optical Spectroscopy} presents the optical spectroscopy techniques employed to study exciton and polariton behavior.
 
-\section{van der Waals heterostructure Fabrication}
+\section{van der Waals heterostructure Fabrication} \label{sec:van der Waals heterostructure Fabrication}
 
 \subsection{PC Dry transfer}
+\label{sec:PC Dry transfe}
 Since two-dimensional transition-metal dichalcogenides (TMDs) are layered crystals without dangling bonds between adjacent sheets, they can be mechanically exfoliated by the scotch-tape method down to the monolayer limit. 
 The weak interlayer van der Waals forces also allow different 2D crystals to be stacked together, forming van der Waals heterostructures. 
 Such heterostructures can be assembled either by wet or dry transfer. In the wet transfer process, exfoliated flakes are floated off the substrate in a liquid medium and redeposited onto a target, which is straightforward to implement but often leaves polymer residues or trapped bubbles at the interfaces. 
@@ -26,6 +31,7 @@ Direct PDMS stamping without a polymer interlayer is also possible and offers a 
 Overall, the PC-assisted dry transfer method provides a balance of clean interfaces, mechanical stability, and reproducibility, and was therefore adopted in this work for the assembly of van der Waals heterostructures.
 
 \subsection{Electrodes Patterning}
+\label{sec:Electrodes Patterning}
 Electron beam lithography (EBL) was employed to define nanoscale electrodes and contact pads for the van der Waals heterostructures in this thesis. 
 In this technique, a finely focused electron beam is scanned across the surface of an electron-sensitive resist, directly writing the desired pattern with nanometer precision. 
 For this work, the heterostructure samples were first spin-coated with a positive, low-molecular-weight e-beam resist, MMA(8.5) EL11(methyl methacrylate), at 3000 rpm for 60s, yielding a film thickness of approximately 500 nm. 
@@ -38,6 +44,7 @@ After exposure, the samples were developed in a 1:3 solution of DI water and iso
 Finally,the 5 nm Cr and 80 nm Au were deposited by thermal evaporation, and the remaining resist was lifted off in acetone and then soaked in IPA.
 
 \subsection{Electrostatic Model in Dual-gate FET}
+\label{Electrostatic Model in Dual-gate FET}
 Stacking different 2D materials (eg. conductive graphite,insulated hBN, semiconductor TMD) together with a sequence enable multifunctional device. One of the most common device structure is the FETs (Field-Effect transistors).
 In the 2D FET structure, a thin TMD flake is contacted by graphite, while a gate electrode is separated from the channel by insulating dielectric hBN. 
 The graphite gate electrode does not conduct current directly into the TMD channel, instead, an applied gate voltage shifts the Fermi level in the TMD by electrostatic coupling. 
@@ -110,7 +117,10 @@ F_z &= \frac{1}{2}\,\frac{\epsilon_{hBN}}{\epsilon_{TMD}}
 The $\epsilon_{TMD}$ we use for trilayer $WSe_2$ is around 7 in chapter 5.
 
 \section{1D microcavity}
+\label{1D microcavity}
+
 \subsection{Transfer Matrix Method}
+\label{Transfer Matrix Method}
 The transfer matrix method (TMM) is a widely used approach for modeling the optical response of multilayer thin-film structures. 
 In this method, each dielectric layer is treated as a homogeneous medium characterized by its refractive index and thickness. 
 Light propagation through a layer is represented by a propagation (phase) matrix, while each interface between adjacent layers is described by a dynamical matrix derived from the Fresnel reflection and trans-mission coefficients. 
@@ -240,15 +250,16 @@ A = 1 - R - T.
 \end{equation}
 
 \subsection{Distributed Bragg Reflector(DBR)}
+\label{Distributed Bragg Reflector(DBR)}
 A high quality-factor (Q) microcavity is essential to minimize photon losses and extend the photon lifetime, thereby enhancing the light-matter coupling strength and nonlinear interactions among polaritons. 
 A Fabry–Pérot cavity composed of distributed Bragg reflectors (DBRs) offers simple, well-defined optical modes that are easy to model and measure, making it particularly suitable for polariton studies in 2D materials. 
 Each DBR is formed by alternating two dielectric materials with a high refractive index contrast, with each layer thickness set to $l = \frac {\lambda}{4 n_0}$ to achieve constructive interference and high reflectivity within the stopband. 
 Placing two DBRs with a separation corresponding to an optical thickness of $l_c = \frac {\lambda}{2 n_0}$ forms a resonance at $\lambda_0$.
 
 \section{Metrology}
+\label{sec:Metrology}
 
 \subsection{PFM}
-
 Piezoresponse Force Microscopy (PFM) is an atomic force microscopy–based technique for characterizing piezoelectric and ferroelectric materials at the nanoscale. 
 In PFM, a conductive AFM tip is brought into contact with the sample surface, and an AC voltage is applied between the tip and the bottom electrode. 
 The converse piezoelectric effect causes the local sample region to expand and contract at the excitation frequency, which in turn drives oscillations of the cantilever. 
@@ -273,6 +284,7 @@ PFM images are obtained with a scan rate of 1Hz and a $0^{\circ}$ scan angle.
 This setup enables reliable imaging of ferroelectric domains and polarization switching in thin films and emerging low-dimensional systems, providing both structural and functional information at the nanoscale.
 
 \section{Optical Spectroscopy}
+\label{sec:Optical Spectroscopy}
 Optical spectroscopy is the main method for characterizing the excitonic behavior in TMD system. 
 
 \subsection{Real- and Fourier space confocal microscopy}
