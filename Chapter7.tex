@@ -4,6 +4,62 @@
 
 \chapter{Summary and Outlook}
 \label{chap7}
-section{Summary}
+\section{Summary}
 
-section{Outlook}
+In this thesis, we explored the tightly bound excitons in TMDs on its exciton nonlinear interaction, and manipulate its interaction strength through:(1) quantum confinement through moire electrostatic superlattice in Chap.~\ref{chap4} and (2) cavity engineering in Chap.~\ref{chap6}. 
+
+In Chap.~\ref{chap4}, we leverge the moiré electrostatic superlattice of twisted hBN to imprint nanoscale, quasi-one-dimensional potential wells into adjacent 2D semiconductors. 
+At the moiré domain boundaries, strong in-plane fields reshape the optical reflectance of monolayer MoSe$_2$ and reveal intralayer excitons confined to $\sim$10~nm-wide strips. 
+The confined response is linearly polarized, consistent with a quasi-1D exciton channel rather than a 2D sheet. 
+Owing to their larger polarizability, Rydberg excitons experience even tighter localization under the same fields. 
+From the confined spectra, we extract an exciton COM confinement length around $\sim$4~nm, which localized the exciton wavefunction and thus enhance the exciton interaction strength.
+This can lower the optical density required to observe nonlinear shifts, and improves overlap with guided photonic modes along the boundary. 
+
+In Chap.~\ref{chap5}, we demonstrated electrical control of multiple exciton species in trilayer WSe$_2$ and showed that the polaron regime yields a strong, gate-dependent nonlinear optical response at low excitation densities. 
+The observed $\sim$10~meV nonlinear blueshift under CW excitation corresponds to an interaction strength on the order of $\mathrm{meV}\!\cdot\!\mu\mathrm{m}^2$, attributable to exciton–carrier (polaron) interactions enabled by the distinctive band structure of the trilayer system.
+
+Based on this, we developed an electrically tunable 1D microcavity in Chap.~\ref{chap6}. 
+As exptected, we observed robust strong coupling at 5~K with a Rabi splitting of $\sim$30~meV in trilayers (vs.~$\sim$20~meV in monolayers) that persists across wide gate ranges. 
+Under resonant drive, only hole-doped trilayers showed blueshifts of both polariton branches, confirming polaron-mediated interactions; at higher powers the Rabi splitting decreased due to oscillator-strength bleaching. 
+Together, these results demonstrate a bright, electrically tunable polaron–polariton platform that combines large oscillator strength with pronounced nonlinearity, providing a practical route toward the quantum nonlinear regime.
+
+\section{Outlook: Roadmap towards the Blockade Regime}
+% The long-term goal for realizing few-photon nonlinear optics in TMD–based solid state platforms relies on manipulating the interactions among the components. 
+% Photon blockade, as the phenomena of the interaction dominated system,
+% requires a large interaction strength $U$ relative to the total linewidth $\gamma$ (including cavity loss $\kappa$ and matter dephasing $\gamma_\mathrm{X}$), i.e., $U/\gamma \geq 1$. 
+% Canonical demonstrations in atom–cavity and quantum-dot–cavity systems establish practical targets for $U$, $Q$ (i.e., $\kappa$), and spectral stability~\cite{Birnbaum2005Nature,Faraon2008NatPhys,Reinhard2012NatPhoton}. These benchmarks frame the figures of merit our TMD–cavity devices should pursue.
+
+The long-term goal is to realize few-photon nonlinear optics on TMD-based solid-state platforms.
+This relies on the system with strong interactions among their components.
+One key milestone is the Photon blockade: it occurs when the interaction energy $U$ exceeds the total linewidth $\gamma$ (the sum of cavity loss $\kappa$ and matter dephasing $\gamma_{X}$), i.e., when $U/\gamma \geq 1$. 
+Prior demonstrations in atom–cavity and quantum-dot–cavity systems set practical targets for $U$, for the cavity quality factor $Q$ (and thus $\kappa$), and for spectral stability~\cite{Birnbaum2005-ix,}{Birnbaum2005Nature,Faraon2008NatPhys,Reinhard2012NatPhoton}. 
+These benchmarks define the figures of merit our TMD–cavity devices aim to meet.
+
+Motivated by this target, we first consider quantum confinement as a lever to increase $U$ and reduce $\gamma$. 
+In-plane exciton localization and tighter photonic confinement both reduce the effective mode volume, enhancing the light–matter coupling $g \propto V_\mathrm{eff}^{-1/2}$ and, in turn, polariton–polariton interactions. 
+Confinement can also suppress momentum-scattering channels and spectral diffusion, lowering $\gamma_\mathrm{X}$. 
+While our current demonstration is limited in strength and scale, natural next steps are: (i) engineer 0D potentials (patterned gates, strain-defined dots, or local thickness steps) to shrink the exciton COM wavefunction; (ii) co-localize the exciton trap with a photonic antinode; and (iii) minimize disorder via fully encapsulated, ultra-clean stacks and gentle pattern transfer. 
+Taken together, these efforts directly raise $U/\gamma$.
+
+In parallel, cavity optimization addresses the photonic loss channel $\kappa$. 
+High-$Q$, all-dielectric transferable DBRs (to reduce absorption and scatter) and low-roughness lateral patterning (to control the in-plane mode) offer immediate paths to lower $\kappa$. 
+Once $Q$ is improved, a decisive milestone is a Hanbury Brown–Twiss measurement of the second-order correlation $g^{(2)}(0)$ under resonant or quasi-resonant drive to test for antibunching. 
+This experiment provides a direct readout of few-photon nonlinearities and anchors progress toward blockade.
+
+We can also apply the same confinement method to polaritons in trilayer WSe$_2$. 
+Since the lower-polariton effective mass is smaller than the bare exciton’s, comparable potentials can yield tighter polariton mode areas and stronger interactions per photon. 
+From the experiment aspect, this can be achieved through including shallow electrostatic traps, thickness-defined mesas aligned to cavity antinodes, and photonic lattices or patterned top DBRs to form 0D polariton confinement. 
+The main challenges are maintaining a high $Q$ during patterning and uniform gating. This requires careful process integration and control.
+
+Finally, to improve measurement fidelity and sensitivity to oscillator-strength changes, can we try emission as the probe?
+Cavity-enhanced PL or resonance fluorescence (with engineered out-couplers for efficient collection) can boost signal-to-background, while electrically injected EL in a $p$–$i$–$n$ stack enables device-relevant mapping of nonlinearities. 
+Crucially, emission-based $g^{(2)}(0)$ at the spectral peak of a single confined polariton offers a clean test for antibunching and saturation effects at the few-photon level.
+
+In summary, these threads define a concrete path: (i) deploy all-dielectric transferable DBRs to raise $Q$; (ii) realize 0D confinement (gate- or strain-defined) co-registered with photonic antinodes; (iii) port confinement to polaritons in trilayer WSe$_2$ to exploit their lighter mass; and (iv) validate few-photon behavior via resonant, emission-based $g^{(2)}(0)$. Each step incrementally increases $U/\gamma$ while sharpening our diagnostics, bringing photon blockade within experimental reach on a scalable TMD–cavity platform.
+
+% Example canonical references (adjust to your .bib):
+% \bibitem{Birnbaum2005Nature} K.~M.~Birnbaum \textit{et al.}, Nature \textbf{436}, 87–90 (2005).
+% \bibitem{Faraon2008NatPhys} A.~Faraon \textit{et al.}, Nat. Phys. \textbf{4}, 859–863 (2008).
+% \bibitem{Reinhard2012NatPhoton} A.~Reinhard \textit{et al.}, Nat. Photonics \textbf{6}, 93–96 (2012).
+
+
