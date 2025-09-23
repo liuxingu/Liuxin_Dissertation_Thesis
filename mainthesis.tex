@@ -110,7 +110,8 @@
 % \renewcommand{\bibname}{\begin{center}\Large\bfseries Bibliography\end{center}}
 
 \hyphenation{tem-po-ral-ly   pro-cessing ex-pe-ri-men-tal-ly
-fluc-tua-tions   si-mu-la-tions  ex-ci-tonic  po-lar-itons  mi-cro-cav-i-ty pola-ri-zation metha-crylate hy-bridiza-tion quasi-particles en-cap-su-la-tion}
+fluc-tua-tions   si-mu-la-tions  ex-ci-tonic  po-lar-itons  mi-cro-cav-i-ty pola-ri-zation metha-crylate hy-bridiza-tion quasi-particles en-cap-su-la-tion polariz-ability}
+
 
 \begin{document}
 \justifying
@@ -178,18 +179,22 @@ fluc-tua-tions   si-mu-la-tions  ex-ci-tonic  po-lar-itons  mi-cro-cav-i-ty pola
 
 %When using Bibtex, delete the previous line and use the following
 %three lines:
-\newpage
-\chapter*{Bibliography}
-\addcontentsline{toc}{chapter}{Bibliography}
 
-% suppress the automatic heading inside thebibliography
-\begingroup
-  \renewcommand{\bibname}{}% keep it empty so no extra title is printed
-  \bibliographystyle{unsrt}
-  \bibliography{paper2}
-\endgroup
+\renewcommand{\bibname}{\normalfont\fontsize{20}{36}\selectfont\bfseries Bibliography}
 
+\cleardoublepage
+\phantomsection
+\bibliographystyle{unsrt}
+\bibliography{paper2}
+
+% \cleardoublepage
+% \phantomsection
+% % \chapter*{Bibliography}
+% % \addcontentsline{toc}{chapter}{Bibliography}
 % \bibliographystyle{unsrt}
+% \bibliography{paper2}
+% \bibliographystyle{unsrt}
+
 % \bibliography{paperpile} %replace "Galactic,Dottie" with the
 %                 file name(s) of your bib file(s)
 
