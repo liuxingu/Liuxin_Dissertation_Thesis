@@ -69,7 +69,7 @@ Here, the electrostatic model we used for calculating the doping density $n_{tot
 \small\normalsize
 % --------------
 
-The TMD (here we use trilayer $WSe_2$ to keep it consistant with Chapter.5 )is modelled as the grounded sheet. 
+The TMD (here we use trilayer WSe$_2$ to keep it consistant with Chapter.5 )is modelled as the grounded sheet. 
 Through the electrostatic gating, the generated displacement field $D_t$ and $D_b$ according to the applied $V_{tg}$ and $V_{bg}$ can lead to the net carrier doping in the TMD layer with the density of $n_{total}$ and the displacement filed $D_z$. 
 These two parameters can be tunded independently through $V_{tg}$ and $V_{bg}$. The displacement field can be tuned as:
 \begin{align}
@@ -158,15 +158,14 @@ n_0 \sin\theta_0 = n_1 \sin\theta_1 = n_2 \sin\theta_2.
 
 The electric field in each region can then be expressed as a superposition of forward- and backward-propagating plane waves:
 \begin{equation}
-E(x) =
+E(x)=
 \begin{cases}
-E_0^+ e^{i k_0 x} + E_0^- e^{-i k_0 x}, & x < 0, \\[4pt]
-E_0^{\prime +} e^{i k_1 x} + E_0^{\prime -} e^{-i k_1 x}, & 0 < x < L, \\[4pt]
-E_1^+ e^{i k_2 (x-L)} + E_1^- e^{-i k_2 (x-L)}, & x > L .
+E_0^{+} e^{i k_0 x} + E_0^{-} e^{-i k_0 x}, & \text{for } x<0,\\[4pt]
+E_1^{+} e^{i k_1 x} + E_1^{-} e^{-i k_1 x}, & \text{for } 0<x<L,\\[4pt]
+E_2^{+} e^{i k_2 (x-L)} + E_2^{-} e^{-i k_2 (x-L)}, & \text{for } x>L.
 \end{cases}
 \label{eq:Ex_f}
 \end{equation}
-
 By enforcing continuity of the electric field and its derivative at each interface, one obtains the Fresnel reflection and transmission amplitudes for TE polarization:
 \begin{equation}
 r_{ij}^{(\mathrm{TE})} = \frac{q_i - q_j}{q_i + q_j}, 
