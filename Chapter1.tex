@@ -10,37 +10,30 @@
 
 \chapter{Introduction}
 \label{chap1}
-I write this thesis at a moment when AI demand is exploding.
+\section{Overview}
 Modern computing is straining under the combined pressures of scale and efficiency, and AI workloads are growing faster than improvements in transistor density and memory bandwidth.
 As models get larger and memory sits farther from the processor, transferring data takes longer and consumes more energy.
 Traditional copper interconnects stores charge to send a “1” and discharge to send a “0,” so a longer transfer distance require more energy every time they switch. 
 They also respond more slowly because the charge has farther to go and more resistance and capacitance to overcome, which increases latency.
 
+Optical interconnects can transfer data by encoding electrical signal onto light with on-chip optical modulator,which can avoid Ohmic loss and enable high bandwidth over long distances.
+In the center of these modulation is the nonlinear response originates form the material's own property. 
+As the large optical nonlinearities enables control light with another.
 
-In parallel, quantum information processing promises advantages for problems intractable on classical machines, but progress depends on scalable, low-loss photonic hardware and high-fidelity light–matter interfaces. 
-In both cases, optics is important: 
-for classical systems, photonics can replace or augment copper wires with low loss, high bandwidth, and enable compact, energy efficient signal processing; 
-for quantum systems, single photons are basic units of quantum information and networking.
-A path forward is to enhance the strength of light–matter interactions in solids and reaching to a strong correlated system where 
-so that photons can be efficiently modulated, switched, and even interact with one another at low energies. 
+Typically, achieving this large modulation typically requires many photons or high field intensities.
+Pushing from classical to quantum photonics, where single photons can influence one another’s behavior, requires much stronger interactions.
+This is the long term goal for the field of quantum optics to develop solid-state system which is CMOS compatible, uniform, scalable, and strong coupled to nanophotonic modes. 
 
-Excitons with large optical oscillator strength couples efficiently to light. 
-Their resonant and many-body character yields steep dispersion and strong nonlinearity; and their properties are engineerable based on different materials system, dielectric environment.
-By converting modest electrical or optical perturbations into large changes in absorption and refractive index, exciton platforms supply the compact, low-voltage modulators and switches needed to relieve the communication side of the von Neumann bottleneck and to build low-loss, high-coherence interfaces for quantum photonics. 
+2D materials (TMDs) are especially attractive due to the following aspects:
+These van der Waals semiconductors are indirect bandgap in bulk but transfer to direct bandgap in the monolayer. 
+Their exciton binding energies (typically around hunderds of meV
+when hBN encapsulated) are orders of magnitude larger than in conventional III–V systems, yielding robust excitonic resonances with large oscillator strengths and strong light–matter coupling at and even room temperature. 
+The monolayer’s broken inversion symmetry and strong spin–orbit coupling give valley dependent optical selection rules, enabling helicity selective excitation and potential valley based information encoding in classical and quantum settings.
 
-Two-dimensional (2D) semiconductors are well known for their electrical and optical properties. 
-Their broad spectral range covers from ultraviolet(hBN) towards telecom, which enables
-suited to compact photonics due to their strong excitonic effect.
-Their atomically thin layers can be placed exactly at the field maximum in tiny resonators, which boosts performance without scaling with size. 
-In addition,their semiconducting nature enables electrical tunability: simple gate structures change carrier density and switch between exciton types, allowing the same device to act as an absorber or a phase shifter. 
-
-Optical modulation in 2D layered materials has advanced rapidly in recent years\cite{Sun2016-gg}. 
-Prominently, this has led to massive prototype demonstrations of optical modulators with different modulation mechanisms.
-
-Together, these features enable micrometer-scale modulators and emitters with low drive voltage and low energy per bit, directly supporting dense on-chip and short-reach optical links.
-
-% This thesis explores exciton-based platforms—especially in atomically thin semiconductors—for both classical and quantum photonics, emphasizing device physics, cavity engineering, and integration routes that translate these advantages into practical on-chip systems.
-
+In addition, their atomic thin nature supports heterogeneous, low temperature BEOL integration with silicon photonics and CMOS electronics. 
+This improves precise placement of the active regions at cavity field antinodes, minimizes parasitics to the electrical drivers, and enables compact, energy efficient electro-optic modulators that leverage exciton-mediated changes in absorption and refraction. 
+Embedding TMDs in microcavities or photonic crystal resonators can push systems into the strong coupling regime, 
+enhancing nonlinear phase shifts per photon and opening a route from high contrast classical modulation to few photon quantum nonlinear optics on a scalable, chip-integrated platform.
 
 \section{Thesis outline}
 This thesis focus on developing systems with large exciton interactions towards giant optical nonlinearity.
@@ -50,3 +43,5 @@ Chapter~\ref{chap4} will discuss the approach towards exciton quantum confinemen
 Chapter~\ref{chap5} will introduce the developed system with giant optical nonlinearity of Fermi polarons, where the exciton-carrier interaction contributes to this large nonlinear shift.
 Chapter~\ref{chap6} will discuss the ongoing project based on Chap.~\ref{chap5} that we leverage cavity engineering for realizing polaron-polariton with enhanced optical nonlinearity.
 Chapter~\ref{chap7} summarize the whole thesis and discuss the future directions of the work.
+
+
