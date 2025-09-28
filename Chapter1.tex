@@ -11,29 +11,43 @@
 \chapter{Introduction}
 \label{chap1}
 \section{Overview}
-Modern computing is straining under the combined pressures of scale and efficiency, and AI workloads are growing faster than improvements in transistor density and memory bandwidth.
+Modern computing is under the combined pressures of scale and efficiency, and AI workloads are growing faster than improvements in transistor density and memory bandwidth.
 As models get larger and memory sits farther from the processor, transferring data takes longer and consumes more energy.
 Traditional copper interconnects stores charge to send a “1” and discharge to send a “0,” so a longer transfer distance require more energy every time they switch. 
 They also respond more slowly because the charge has farther to go and more resistance and capacitance to overcome, which increases latency.
 
 Optical interconnects can transfer data by encoding electrical signal onto light with on-chip optical modulator,which can avoid Ohmic loss and enable high bandwidth over long distances.
-In the center of these modulation is the nonlinear response originates form the material's own property. 
-As the large optical nonlinearities enables control light with another.
+Key building blocks for this consist electro optical modulators, high responsivity photodetectors, compact on-chip light sources(or external input coupling), low-loss waveguides/couplers, and driver electronics.
+Among them, materials such as III–V, LiNbO$_3$, 2D semiconductors provide efficient gain, fast modulation and strong electro-optic effects.
+Among these building blocks, the electro–optic modulator (EOM) is especially critical, as it sets the link bandwidth and energy per bit and largely determines extinction ratio and noise margin.
+The modulation efficiency arises from the material’s nonlinear optical response as function of the electrical field or doping density. 
+The induced changes in absorption and refractive index then can convert small electrical drives into large optical contrast. 
+In the classical regime, large modulation depth typically requires many photons or high optical fields. 
 
-Typically, achieving this large modulation typically requires many photons or high field intensities.
-Pushing from classical to quantum photonics, where single photons can influence one another’s behavior, requires much stronger interactions.
-This is the long term goal for the field of quantum optics to develop solid-state system which is CMOS compatible, uniform, scalable, and strong coupled to nanophotonic modes. 
+2D semiconductors provide strong excitonic behavior which can be easily tuned by the gating voltage. 
+This enable the application in ultra compact and low voltage modulator.
 
-2D materials (TMDs) are especially attractive due to the following aspects:
-These van der Waals semiconductors are indirect bandgap in bulk but transfer to direct bandgap in the monolayer. 
-Their exciton binding energies (typically around hundreds of meV
-when hBN encapsulated) are orders of magnitude larger than in conventional III–V systems, yielding robust excitonic resonances with large oscillator strengths and strong light–matter coupling at and even room temperature. 
-The monolayer’s broken inversion symmetry and strong spin–orbit coupling give valley dependent optical selection rules, enabling helicity selective excitation and potential valley based information encoding in classical and quantum settings.
+Optical computing leverages photons to perform signal processing and computation with intrinsically high bandwidth, low latency, and reduced energy dissipation. 
+Because photons are massless and do not experience resistive losses, optical links can achieve lower energy per bit and avoid the RC bottlenecks that limit charge-based electronics. 
+Moreover, optical channels are coherent and exhibit low crosstalk, allowing them to naturally implement linear algebra operations central to AI and scientific computing.
 
-In addition, their atomic thin nature supports heterogeneous, low temperature BEOL integration with silicon photonics and CMOS electronics. 
-This improves precise placement of the active regions at cavity field antinode, minimizes parasitics to the electrical drivers, and enables compact, energy efficient electro-optic modulators that leverage exciton-mediated changes in absorption and refraction. 
-Embedding TMDs in microcavities or photonic crystal resonators can push systems into the strong coupling regime, 
-enhancing nonlinear phase shifts per photon and opening a route from high contrast classical modulation to few photon quantum nonlinear optics on a scalable, chip-integrated platform.
+Despite these advantages, a major challenge for all-optical logic is the weakness of optical nonlinearities in conventional materials. 
+Since photons do not interact in linear media, and inducing a significant optical response typically requires high field intensities or large photon numbers. 
+Current optical switches based on the Kerr effect or free-carrier modulation require elevated power levels for fast modulation, leading to effects such as two-photon absorption, excess carrier and heat generation.
+These side effects inject noise and cause thermal drift, especially when many devices are integrated on the same chip.
+
+A promising path forward is to enter the quantum nonlinear regime, where even a few photons can interact strongly. 
+One key goal is achieving photon blockade, in which the presence of a single photon shifts the system energy to prevent the entry of a second. 
+This enables single-photon switches, quantum logic gates, and generation of nonclassical light source, all essential components for scalable quantum photonic circuits. 
+However, realizing photon blockade requires nonlinear energy shifts that exceed the linewidth. 
+
+2D semiconductors offer a unique opportunity to bridge this gap. 
+Their tightly bound excitons exhibit large oscillator strengths and support strong exciton–exciton and exciton–carrier interactions, giving rise to large Kerr-like optical nonlinearities. 
+These interactions can be further enhanced by coupling to optical cavities, engineering moiré potentials, or applying spatial confinement, pushing device operation into the few-photon regime. 
+The atomically thin nature of 2D materials enables ultra-compact devices and high-density integration via van der Waals stacking, compatible with silicon photonics and CMOS platforms\cite{}. 
+Moreover, gate-tunable carrier densities and dielectric engineering offer additional knobs to optimize modulation speed, contrast, and noise. 
+
+In summary, these properties make 2D semiconductors a scalable platform for both energy efficient optical computing and quantum nonlinear optics based with large exciton interactions.
 
 \section{Thesis Outline}
 This thesis focus on developing systems with large exciton interactions towards giant optical nonlinearity.
