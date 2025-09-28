@@ -11,38 +11,37 @@
 \chapter{Introduction}
 \label{chap1}
 \section{Overview}
-Modern computing is under the combined pressures of scale and efficiency, and AI workloads are growing faster than improvements in transistor density and memory bandwidth.
+Modern computing is under the combined pressures of scale and efficiency, and AI workloads are growing faster than improvements in transistor density and memory bandwidth\cite{Sun2015-am}.
 As models get larger and memory sits farther from the processor, transferring data takes longer and consumes more energy.
 Traditional copper interconnects stores charge to send a “1” and discharge to send a “0,” so a longer transfer distance require more energy every time they switch. 
-They also respond more slowly because the charge has farther to go and more resistance and capacitance to overcome, which increases latency.
+They also respond more slowly because the charge has farther to go and more resistance and capacitance to overcome, which increases latency\cite{Miller2000-lm}.
 
-Optical interconnects can transfer data by encoding electrical signal onto light with on-chip optical modulator,which can avoid Ohmic loss and enable high bandwidth over long distances.
-Key building blocks for this consist electro optical modulators, high responsivity photodetectors, compact on-chip light sources(or external input coupling), low-loss waveguides/couplers, and driver electronics.
-Among them, materials such as III–V, LiNbO$_3$, 2D semiconductors provide efficient gain, fast modulation and strong electro-optic effects.
-Among these building blocks, the electro–optic modulator (EOM) is especially critical, as it sets the link bandwidth and energy per bit and largely determines extinction ratio and noise margin.
+Optical interconnects can transfer data by encoding electrical signal onto light with on-chip optical modulator,which can avoid Ohmic loss and enable high bandwidth over long distances\cite{Sun2015-am}.
+Key building blocks for this consist electro optical modulators, high responsivity photodetectors, compact on-chip light sources(or external input coupling), low-loss waveguides/couplers, and driver electronics\cite{Miller2009-hw}.
+Among them, materials such as III–V, LiNbO$_3$, 2D semiconductors provide efficient gain, fast modulation and strong electro-optic effects\cite{Sun2016-gg}.
+Among these building blocks, the electro–optic modulator (EOM) is especially critical, as it sets the link bandwidth and energy per bit and largely determines extinction ratio and noise.
 The modulation efficiency arises from the material’s nonlinear optical response as function of the electrical field or doping density. 
 The induced changes in absorption and refractive index then can convert small electrical drives into large optical contrast. 
-In the classical regime, large modulation depth typically requires many photons or high optical fields. 
+In the classical regime, large modulation depth typically requires many photons or high optical fields\cite{Miller2009-hw}. 
 
 2D semiconductors provide strong excitonic behavior which can be easily tuned by the gating voltage. 
 This enable the application in ultra compact and low voltage modulator.
 
-Optical computing leverages photons to perform signal processing and computation with intrinsically high bandwidth, low latency, and reduced energy dissipation. 
+Optical computing leverages photons to perform signal processing and computation with intrinsically high bandwidth, low latency, and reduced energy dissipation\cite{Miller2010-nt}. 
 Because photons are massless and do not experience resistive losses, optical links can achieve lower energy per bit and avoid the RC bottlenecks that limit charge-based electronics. 
-Moreover, optical channels are coherent and exhibit low crosstalk, allowing them to naturally implement linear algebra operations central to AI and scientific computing.
 
-Despite these advantages, a major challenge for all-optical logic is the weakness of optical nonlinearities in conventional materials. 
-Since photons do not interact in linear media, and inducing a significant optical response typically requires high field intensities or large photon numbers. 
-Current optical switches based on the Kerr effect or free-carrier modulation require elevated power levels for fast modulation, leading to effects such as two-photon absorption, excess carrier and heat generation.
+Despite these advantages, a major challenge for all-optical logic is the weakness of optical nonlinearities in conventional materials\cite{Boyd2020-re}. 
+Since photons do not interact in linear media, and inducing a significant optical response typically requires high field intensities or large photon numbers\cite{Chang2014-hk}. 
+Current optical switches based on the Kerr effect or free-carrier modulation require elevated power levels for fast modulation, leading to effects such as two-photon absorption, excess carrier and heat generation\cite{Miller2009-hw}.
 These side effects inject noise and cause thermal drift, especially when many devices are integrated on the same chip.
 
 A promising path forward is to enter the quantum nonlinear regime, where even a few photons can interact strongly. 
-One key goal is achieving photon blockade, in which the presence of a single photon shifts the system energy to prevent the entry of a second. 
-This enables single-photon switches, quantum logic gates, and generation of nonclassical light source, all essential components for scalable quantum photonic circuits. 
-However, realizing photon blockade requires nonlinear energy shifts that exceed the linewidth. 
+One key goal is achieving photon blockade, in which the presence of a single photon shifts the system energy to prevent the entry of a second\cite{Imamoglu1997-pb}. 
+This enables single-photon switches, quantum logic gates, and generation of nonclassical light source, all essential components for scalable quantum photonic circuits\cite{UnknownUnknown-cd}. 
+However, realizing photon blockade requires nonlinear energy shifts that exceed the linewidth\cite{Carusotto2013-mf}. 
 
 2D semiconductors offer a unique opportunity to bridge this gap. 
-Their tightly bound excitons exhibit large oscillator strengths and support strong exciton–exciton and exciton–carrier interactions, giving rise to large Kerr-like optical nonlinearities. 
+Their tightly bound excitons exhibit large oscillator strengths and support strong exciton–exciton and exciton–carrier interactions, giving rise to large Kerr-like optical nonlinearities\cite{Wang2018-qm,}. 
 These interactions can be further enhanced by coupling to optical cavities, engineering moiré potentials, or applying spatial confinement, pushing device operation into the few-photon regime. 
 The atomically thin nature of 2D materials enables ultra-compact devices and high-density integration via van der Waals stacking, compatible with silicon photonics and CMOS platforms\cite{}. 
 Moreover, gate-tunable carrier densities and dielectric engineering offer additional knobs to optimize modulation speed, contrast, and noise. 
