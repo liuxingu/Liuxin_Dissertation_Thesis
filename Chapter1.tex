@@ -36,17 +36,26 @@ Current optical switches based on the Kerr effect or free carrier modulation req
 These side effects inject noise and cause thermal drift, especially when many devices are integrated on the same chip.
 
 A promising path forward is to enter the quantum nonlinear regime, where even a few photons can interact strongly. 
-One key goal is achieving photon blockade, in which the presence of a single photon shifts the system energy to prevent the entry of a second\cite{Imamoglu1997-pb}. 
+One key goal is to achieve photon blockade, in which the presence of a single photon shifts the system energy to prevent the entry of a second\cite{Imamoglu1997-pb}. 
 This enables single photon switches, quantum logic gates, and generation of nonclassical light source, all essential components for scalable quantum photonic circuits\cite{Lodahl2015-el,Chang2014-hk}. 
 However, realizing photon blockade requires nonlinear energy shifts that exceed the linewidth\cite{Carusotto2013-mf}. 
+
+Photon blockade requires anharmonic shift $U \geq \Gamma$, where $\Gamma=\kappa+\gamma^\ast$ is the total linewidth including cavity decay $\kappa$ and pure dephasing $\gamma^\ast$~ \cite{Birnbaum2005-ix,Verger2006-jz}. 
+For a Kerr medium, the $U$ is proportional to $g /A_{\mathrm{eff}}$, where $g$ is a property from the material nonlinear coupling. $A_{\mathrm{eff}}$ the optical mode area. 
+In standard dielectric or III–V cavities, one typically finds $g \sim 0.1$–$1~\mu\mathrm{eV}\cdot\mu\mathrm{m}^2$ and $A_{\mathrm{eff}}\sim 5$–$20~\mu\mathrm{m}^2$.
+This gives out an overall $U\sim 0.01$–$0.2~\mathrm{meV}$, which is usually below $\Gamma\sim 0.2$–$2~\mathrm{meV}$ even at cryogenic temperatures. 
+That's why it's challenging in realizing this in conventional materials or systems.
 
 2D semiconductors offer a unique opportunity to bridge this gap. 
 Their tightly bound excitons exhibit large oscillator strengths and support strong exciton exciton interactions, giving rise to large Kerr-like optical nonlinearities\cite{Wang2018-qm}. 
 These interactions can be further enhanced by coupling to optical cavities\cite{Datta2022-po,Walther2018-jp}, engineering moiré potentials\cite{Zhang2021-eb}, or applying spatial confinement\cite{Thureja2022-yc}, pushing device operation into the few-photon regime. 
 The atomically thin nature of 2D materials enables ultra compact devices and high density integration via van der Waals stacking, compatible with silicon photonics and CMOS platforms\cite{de-Abajo2025-vm}. 
 Moreover, gate tunable carrier densities and valley control offer additional knobs to optimize modulation speed, contrast, and noise\cite{Mak2012-le}. 
+The intrinsically short radiative lifetime of excitons\cite{Wang2018-zb}, while challenging for photon statistics measurements, are advantageous for creating single-photon sources with high repetition rates and ultrafast optical switches\cite{Korzh2020-ya,Esmaeil-Zadeh2020-mp}. 
 
-In summary, these properties make 2D semiconductors a scalable platform for both energy efficient optical computing and quantum nonlinear optics based with large exciton interactions.
+In summary, no matter for classical and quantum nonlinear optics applications, enhancing the interaction strength among optical excitations and reducing their linewidth are critical goals.
+While challenges remain in materials growth, theoretical understanding and device engineering, the outlook for 2D materials in nonlinear optics is overwhelmingly positive. 
+Their properties coupled with ongoing innovations, position them as transformative building blocks for the next generation of optical technologies. 
 
 \section{Thesis Outline}
 This thesis focus on developing systems with large exciton interactions towards giant optical nonlinearity.
